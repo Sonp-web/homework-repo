@@ -43,21 +43,21 @@ img {
   max-width: 100%;
   display: block;
 }
+body {
+  color: #205529;
+  font-weight: 500;
+}
 .wrapper__banner-content {
-  padding-top: 28px;
-  height: 414px;
+  padding: 64px 0;
 }
 .banner-content {
   margin: 0 auto;
   max-width: 480px;
-  border: 1px solid #000;
   border-radius: 12px;
   padding: 40px 28px;
   background-color: #faf2e6;
 
   text-align: center;
-  color: #205529;
-  font-weight: 500;
 }
 .special {
   font-size: 12px;
@@ -82,7 +82,7 @@ p {
   line-height: 136%;
 }
 button {
-  padding: 12px 18px;
+  padding: 12px 16px;
   font-weight: 500;
   font-size: 14px;
   line-height: 136%;
@@ -91,4 +91,7 @@ button {
   background: #205529;
   border-radius: 6px;
   border: none;
+}
+.descr {
+  margin-bottom: 20px;
 }
