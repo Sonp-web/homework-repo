@@ -9,111 +9,103 @@
     <header class="header">
       <div class="container">
         <nav class="navbar">
-          <div class="logo">
+          <a class="logo">
             <img src="Frame 1.svg" alt="" class="logo__img" />
-            <div class="logo__description">Ddsgnr</div>
-          </div>
-          <div class="navbar__menu">
-            <ul class="navbar__list">
-              <li class="navbar__item">
-                <a href="" class="navbar__link">Home</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">Treatment </a>
-              </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">About us</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#" class="navbar__link">Contact us</a>
-              </li>
-            </ul>
-            <div class="navbar__actions">
-              <button class="button_search navbar__button_search">
-                Search
-              </button>
-              <button class="button_book navbar__button_book">
-                Book an Appointment
-              </button>
-            </div>
+            Ddsgnr
+          </a>
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="" class="navbar__link">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">Treatment </a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">About us</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">Contact us</a>
+            </li>
+          </ul>
+          <div class="navbar__actions">
+            <button class="btn btn_search navbar__button-search">Search</button>
+            <button class="btn btn_book navbar__button-book">
+              Book an Appointment
+            </button>
           </div>
         </nav>
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <section class="info">
-          <div class="info-list-wrapper">
-            <div class="info-list">
-              <div class="info-list__item">
-                <img src="moon.svg" alt="Moon" class="info-list__img" />
-                <h3 class="info-list__title">Meditation</h3>
-                <p class="info-list__description">
+      <div class="features">
+        <div class="container">
+          <div class="features__wrapper-list">
+            <div class="features__list">
+              <div class="feature">
+                <img src="moon.svg" alt="Moon" class="feature__img" />
+                <h3 class="feature__title">Meditation</h3>
+                <p class="feature__description">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros.
                 </p>
-                <button class="button_more info-list__button_more">
+                <button class="btn btn_more feature__button-more">
                   Learn More
                 </button>
               </div>
-              <div class="info-list__item">
-                <img src="chart.svg" alt="Chart" class="info-list__img" />
-                <h3 class="info-list__title">Therapy</h3>
-                <p class="info-list__description">
+              <div class="feature">
+                <img src="chart.svg" alt="Chart" class="feature__img" />
+                <h3 class="feature__title">Therapy</h3>
+                <p class="feature__description">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros.
                 </p>
-                <button class="button_more info-list__button_more">
+                <button class="btn btn_more feature__button-more">
                   Learn More
                 </button>
               </div>
-              <div class="info-list__item">
-                <img
-                  src="heart-circle.svg"
-                  alt="Heart"
-                  class="info-list__img"
-                />
-                <h3 class="info-list__title">Natural Beauty</h3>
-                <p class="info-list__description">
+              <div class="feature">
+                <img src="heart-circle.svg" alt="Heart" class="feature__img" />
+                <h3 class="feature__title">Natural Beauty</h3>
+                <p class="feature__description">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros.
                 </p>
-                <button class="button_more info-list__button_more">
+                <button class="btn btn_more feature__button-more">
                   Learn More
                 </button>
               </div>
-              <div class="info-list__item">
+              <div class="feature">
                 <img
                   src="emoji-happy.svg"
                   alt="Emoji-happy"
-                  class="info-list__img"
+                  class="feature__img"
                 />
-                <h3 class="info-list__title">Massages</h3>
-                <p class="info-list__description">
+                <h3 class="feature__title">Massages</h3>
+                <p class="feature__description">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros.
                 </p>
-                <button class="button_more info-list__button_more">
+                <button class="btn btn_more feature__button-more">
                   Learn More
                 </button>
               </div>
             </div>
-            <div class="info-actions">
-              <button class="button_book info-actions__button_book">
+            <div class="features__actions">
+              <button class="btn btn_book features__button-book">
                 Book an Appointment
               </button>
-              <button class="button_more info-actions__button_more">
+              <button class="btn btn_more features__button-more">
                 Learn More
               </button>
             </div>
           </div>
-          <img src="Image.png" alt="Placeholder" class="info__img_main" />
-        </section>
+          <img src="Image.png" alt="Placeholder" class="features__img" />
+        </div>
       </div>
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="subscribe">
+        <div class="footer__subscribe subscribe">
           <div class="subscribe__description">
             <h3 class="subscribe__title">Subscribe to our newsletter</h3>
             <p class="subscribe__subtitle">
@@ -121,15 +113,13 @@
             </p>
           </div>
           <div class="subscribe__actions">
-            <form action="./submit" class="subscribe-form">
+            <form action="./submit" class="subscribe__form">
               <input
                 type="text"
                 placeholder="Enter yout email"
-                class="subscribe-form__input"
+                class="subscribe__input"
               />
-              <button type="submit" class="subscribe-form__submit">
-                Subscribe
-              </button>
+              <button type="submit" class="subscribe__submit">Subscribe</button>
             </form>
             <p class="subscribe__info">
               By subscribing you agree to with our
@@ -137,82 +127,80 @@
             </p>
           </div>
         </div>
-        <nav class="footer-nav">
-          <div class="logo">
+        <nav class="footer__nav nav">
+          <a class="logo">
             <img src="Frame 1.svg" alt="" class="logo__img" />
-            <div class="logo__description">Ddsgnr</div>
-          </div>
-          <div class="footer-column">
-            <h4 class="footer-column__title">Explore</h4>
-            <ul class="footer-column__list">
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Treatment</a>
+            Ddsgnr
+          </a>
+          <div class="footer__column">
+            <h3 class="footer__title">Explore</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Treatment</a>
               </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Locations</a>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Locations</a>
               </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Services</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h4 class="footer-column__title">Resources</h4>
-            <ul class="footer-column__list">
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Career</a>
-              </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Communities</a>
-              </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Blog</a>
-              </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Volunteering</a>
-              </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Jobs</a>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Services</a>
               </li>
             </ul>
           </div>
 
-          <div class="footer-column">
-            <h4 class="footer-column__title">About us</h4>
-            <ul class="footer-column__list">
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Contact</a>
+          <div class="footer__column">
+            <h3 class="footer__title">Resources</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Career</a>
               </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Help/Support</a>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Communities</a>
               </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">FAQ</a>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Blog</a>
               </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Terms and Conditions</a>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Volunteering</a>
               </li>
-              <li class="footer-column__item">
-                <a href="#" class="footer-column__link">Partners</a>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Jobs</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3 class="footer__title">About us</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Help/Support</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">FAQ</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms and Conditions</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Partners</a>
               </li>
             </ul>
           </div>
         </nav>
-        <hr />
-        <div class="footer-info">
-          <ul class="footer-info__list">
-            <li class="footer-info__item">
-              <p class="footer-info__desc">2023 Ddsgnr. All right reserved.</p>
+        <hr class="footer__hr"/>
+        <div class="footer__legal">
+          <p class="footer__copyright">2023 Ddsgnr. All right reserved.</p>
+          <ul class="footer__legal-nav nav">
+            <li class="footer__legal-item">
+              <a href="#" class="footer__legal-link">Privacy Policy</a>
             </li>
-            <li class="footer-info__item">
-              <a href="#" class="footer-info__link">Privacy Policy</a>
+            <li class="footer__legal-item">
+              <a href="#" class="footer__legal-link">Terms of Service</a>
             </li>
-            <li class="footer-info__item">
-              <a href="#" class="footer-info__link">Terms of Service</a>
-            </li>
-            <li class="footer-info__item">
-              <a href="#" class="footer-info__link">Cookies Settings</a>
+            <li class="footer__legal-item">
+              <a href="#" class="footer__legal-link">Cookies Settings</a>
             </li>
           </ul>
         </div>
