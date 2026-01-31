@@ -45,15 +45,12 @@ img {
 }
 
 .icons {
-  padding: 200px 240px;
+  padding: 200px 0;
 }
 .icons__wrapper {
   display: flex;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
-  color: #292d33;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .icons__item {
   flex: 1 1 288px;
@@ -62,4 +59,12 @@ img {
 }
 .icons__img {
   margin-bottom: 20px;
+  max-height: 30px;
+}
+.icons__descr {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #292d33;
 }
