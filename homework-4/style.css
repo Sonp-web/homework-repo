@@ -43,9 +43,8 @@ html {
 }
 .tile {
   border-radius: 25px;
-  padding: 70px 40px;
-  width: 320px;
-  height: 420px;
+  padding: 70px 35px;
+  max-width: 320px;
   box-shadow:
     -1px 2px 3px 0 rgba(0, 0, 0, 0.03),
     -4px 7px 7px 0 rgba(0, 0, 0, 0.04),
@@ -54,34 +53,32 @@ html {
     -31px 58px 47px 0 rgba(0, 0, 0, 0.08),
     -48px 89px 80px 0 rgba(0, 0, 0, 0.11);
   background: #485c46;
+  text-align: center;
 }
 .tile__title {
   font-weight: 700;
   font-size: 24px;
   line-height: 121%;
-  text-align: center;
   color: #fff;
-  margin-bottom: 30px;
+  max-width: 220px;
+  margin: 0 auto 30px;
 }
 .tile__wrapper-descr {
   width: 250px;
   height: 192px;
-  text-align: center;
 }
-.tile__descr {
+.tile__description {
   font-weight: 400;
   font-size: 16px;
   line-height: 175%;
-  text-align: center;
   color: #fff;
   margin-bottom: 30px;
 }
 .tile__button {
   border: 2px solid #fff;
   border-radius: 6px;
-  padding: 16px 23px;
-  width: 185px;
-  height: 50px;
+  padding: 14px 23px;
+  max-width: 185px;
   background: #fff;
   font-weight: 600;
   font-size: 16px;
@@ -91,13 +88,13 @@ html {
 .tile_white {
   border-radius: 25px;
   padding: 35px;
-  width: 294px;
-  height: 414px;
+  max-width: 294px;
   background: #f6f9fc;
 }
-.tile__img {
-  margin: 0 auto;
-  margin-bottom: 25px;
+.tile__icon {
+  margin: 0 auto 25px;
+  width: 80px;
+  height: 80px;
 }
 .tile__title_black {
   color: #343a40;
@@ -107,13 +104,12 @@ html {
   width: 224px;
   height: 180px;
 }
-.tile__descr_black {
+.tile__description_black {
   color: #343a40;
 }
 .tile__button_white {
   border: 2px solid #485c46;
   border-radius: 6px;
-  padding: 10px 14px;
-  width: 120px;
-  height: 38px;
+  padding: 8px 14px;
+  max-width: 120px;
 }
