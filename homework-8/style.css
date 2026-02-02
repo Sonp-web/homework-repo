@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  position: relative;
+}
+.header {
+  position: sticky;
+  height: 200px;
+  background-color: black;
+  top: 0;
+  z-index: 1;
+}
+.main {
+  height: 12000px;
+}
+.main__img-wrapper {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  width: 225px;
+  height: 225px;
+}
+.main__img {
+  width: 100%;
+  height: 100%;
+}
+.main__img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.main__arrow {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+}
