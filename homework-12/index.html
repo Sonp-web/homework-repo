@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="filters">
+      <div class="container">
+        <form action="" class="model">
+          <h2 class="filters__title">Фильтры</h2>
+          <div class="model__filters">
+            <div class="model__filter">
+              <p class="model__descr">показать цену</p>
+              <div class="model__groups-price">
+                <div class="model__group">
+                  <input
+                    type="radio"
+                    name="person"
+                    id="person"
+                    class="model__radio"
+                  />
+                  <label for="person" class="model__label"
+                    ><div class="model__custom-radio"></div>
+                    на человека</label
+                  >
+                </div>
+                <div class="model__group">
+                  <input
+                    type="radio"
+                    name="person"
+                    id="all"
+                    class="model__radio"
+                  />
+                  <label for="all" class="model__label"
+                    ><div class="model__custom-radio"></div>
+                    на всех</label
+                  >
+                </div>
+              </div>
+
+              <div class="model__filter">
+                <p class="model__descr">еда</p>
+                <div class="model__groups">
+                  <div class="model__group">
+                    <input
+                      hidden
+                      type="checkbox"
+                      class="model__checkbox"
+                      id="2times"
+                      name="food"
+                    />
+                    <label class="model__label" for="2times">
+                      <div class="model__checkbox-custom">
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.14229 14.4671C5.08195 14.4671 5.02266 14.4513 4.97029 14.4213C4.91793 14.3913 4.87431 14.3482 4.84377 14.2962C3.54988 12.0918 0.102014 7.40039 0.0673297 7.35324C0.0180667 7.28628 -0.00545387 7.20383 0.0010672 7.12096C0.00758826 7.03808 0.0437154 6.96032 0.102845 6.90189L1.1627 5.8546C1.22028 5.79771 1.29598 5.76279 1.37664 5.75592C1.4573 5.74905 1.53781 5.77067 1.60418 5.81701L5.07012 8.23718C7.3744 5.27701 9.51577 3.23412 10.9232 2.0304C12.5008 0.680988 13.5038 0.0746309 13.5458 0.0493616C13.5996 0.0170655 13.6611 3.1801e-06 13.7239 4.63672e-09H15.4385C15.5086 -1.14789e-05 15.5772 0.0213079 15.635 0.0611315C15.6927 0.100955 15.7371 0.157402 15.762 0.222987C15.787 0.288572 15.7914 0.360199 15.7748 0.428369C15.7581 0.496539 15.7211 0.558032 15.6687 0.604696C13.1269 2.86854 10.4842 6.46553 8.71488 9.08429C6.79154 11.9309 5.45636 14.2689 5.4431 14.2922C5.41304 14.345 5.36964 14.3889 5.31724 14.4196C5.26484 14.4503 5.2053 14.4667 5.14458 14.467L5.14229 14.4671Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      2-х разовое питание
+                    </label>
+                  </div>
+                  <div class="model__group">
+                    <input
+                      hidden
+                      type="checkbox"
+                      class="model__checkbox"
+                      id="3times"
+                      name="food"
+                    />
+                    <label class="model__label" for="3times">
+                      <div class="model__checkbox-custom">
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.14229 14.4671C5.08195 14.4671 5.02266 14.4513 4.97029 14.4213C4.91793 14.3913 4.87431 14.3482 4.84377 14.2962C3.54988 12.0918 0.102014 7.40039 0.0673297 7.35324C0.0180667 7.28628 -0.00545387 7.20383 0.0010672 7.12096C0.00758826 7.03808 0.0437154 6.96032 0.102845 6.90189L1.1627 5.8546C1.22028 5.79771 1.29598 5.76279 1.37664 5.75592C1.4573 5.74905 1.53781 5.77067 1.60418 5.81701L5.07012 8.23718C7.3744 5.27701 9.51577 3.23412 10.9232 2.0304C12.5008 0.680988 13.5038 0.0746309 13.5458 0.0493616C13.5996 0.0170655 13.6611 3.1801e-06 13.7239 4.63672e-09H15.4385C15.5086 -1.14789e-05 15.5772 0.0213079 15.635 0.0611315C15.6927 0.100955 15.7371 0.157402 15.762 0.222987C15.787 0.288572 15.7914 0.360199 15.7748 0.428369C15.7581 0.496539 15.7211 0.558032 15.6687 0.604696C13.1269 2.86854 10.4842 6.46553 8.71488 9.08429C6.79154 11.9309 5.45636 14.2689 5.4431 14.2922C5.41304 14.345 5.36964 14.3889 5.31724 14.4196C5.26484 14.4503 5.2053 14.4667 5.14458 14.467L5.14229 14.4671Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      3-разовое питание
+                    </label>
+                  </div>
+                  <div class="model__group">
+                    <input
+                      hidden
+                      type="checkbox"
+                      class="model__checkbox"
+                      id="allin"
+                      name="food"
+                    />
+                    <label class="model__label" for="allin">
+                      <div class="model__checkbox-custom">
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.14229 14.4671C5.08195 14.4671 5.02266 14.4513 4.97029 14.4213C4.91793 14.3913 4.87431 14.3482 4.84377 14.2962C3.54988 12.0918 0.102014 7.40039 0.0673297 7.35324C0.0180667 7.28628 -0.00545387 7.20383 0.0010672 7.12096C0.00758826 7.03808 0.0437154 6.96032 0.102845 6.90189L1.1627 5.8546C1.22028 5.79771 1.29598 5.76279 1.37664 5.75592C1.4573 5.74905 1.53781 5.77067 1.60418 5.81701L5.07012 8.23718C7.3744 5.27701 9.51577 3.23412 10.9232 2.0304C12.5008 0.680988 13.5038 0.0746309 13.5458 0.0493616C13.5996 0.0170655 13.6611 3.1801e-06 13.7239 4.63672e-09H15.4385C15.5086 -1.14789e-05 15.5772 0.0213079 15.635 0.0611315C15.6927 0.100955 15.7371 0.157402 15.762 0.222987C15.787 0.288572 15.7914 0.360199 15.7748 0.428369C15.7581 0.496539 15.7211 0.558032 15.6687 0.604696C13.1269 2.86854 10.4842 6.46553 8.71488 9.08429C6.79154 11.9309 5.45636 14.2689 5.4431 14.2922C5.41304 14.345 5.36964 14.3889 5.31724 14.4196C5.26484 14.4503 5.2053 14.4667 5.14458 14.467L5.14229 14.4671Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      Все включено
+                    </label>
+                  </div>
+                  <div class="model__group">
+                    <input
+                      hidden
+                      type="checkbox"
+                      class="model__checkbox"
+                      id="no"
+                      name="food"
+                    />
+                    <label class="model__label" for="no">
+                      <div class="model__checkbox-custom">
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.14229 14.4671C5.08195 14.4671 5.02266 14.4513 4.97029 14.4213C4.91793 14.3913 4.87431 14.3482 4.84377 14.2962C3.54988 12.0918 0.102014 7.40039 0.0673297 7.35324C0.0180667 7.28628 -0.00545387 7.20383 0.0010672 7.12096C0.00758826 7.03808 0.0437154 6.96032 0.102845 6.90189L1.1627 5.8546C1.22028 5.79771 1.29598 5.76279 1.37664 5.75592C1.4573 5.74905 1.53781 5.77067 1.60418 5.81701L5.07012 8.23718C7.3744 5.27701 9.51577 3.23412 10.9232 2.0304C12.5008 0.680988 13.5038 0.0746309 13.5458 0.0493616C13.5996 0.0170655 13.6611 3.1801e-06 13.7239 4.63672e-09H15.4385C15.5086 -1.14789e-05 15.5772 0.0213079 15.635 0.0611315C15.6927 0.100955 15.7371 0.157402 15.762 0.222987C15.787 0.288572 15.7914 0.360199 15.7748 0.428369C15.7581 0.496539 15.7211 0.558032 15.6687 0.604696C13.1269 2.86854 10.4842 6.46553 8.71488 9.08429C6.79154 11.9309 5.45636 14.2689 5.4431 14.2922C5.41304 14.345 5.36964 14.3889 5.31724 14.4196C5.26484 14.4503 5.2053 14.4667 5.14458 14.467L5.14229 14.4671Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      Без еды
+                    </label>
+                  </div>
+                  <div class="model__group">
+                    <input
+                      hidden
+                      type="checkbox"
+                      class="model__checkbox"
+                      id="fr"
+                      name="food"
+                    />
+                    <label class="model__label" for="fr">
+                      <div class="model__checkbox-custom">
+                        <svg
+                          width="16"
+                          height="15"
+                          viewBox="0 0 16 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.14229 14.4671C5.08195 14.4671 5.02266 14.4513 4.97029 14.4213C4.91793 14.3913 4.87431 14.3482 4.84377 14.2962C3.54988 12.0918 0.102014 7.40039 0.0673297 7.35324C0.0180667 7.28628 -0.00545387 7.20383 0.0010672 7.12096C0.00758826 7.03808 0.0437154 6.96032 0.102845 6.90189L1.1627 5.8546C1.22028 5.79771 1.29598 5.76279 1.37664 5.75592C1.4573 5.74905 1.53781 5.77067 1.60418 5.81701L5.07012 8.23718C7.3744 5.27701 9.51577 3.23412 10.9232 2.0304C12.5008 0.680988 13.5038 0.0746309 13.5458 0.0493616C13.5996 0.0170655 13.6611 3.1801e-06 13.7239 4.63672e-09H15.4385C15.5086 -1.14789e-05 15.5772 0.0213079 15.635 0.0611315C15.6927 0.100955 15.7371 0.157402 15.762 0.222987C15.787 0.288572 15.7914 0.360199 15.7748 0.428369C15.7581 0.496539 15.7211 0.558032 15.6687 0.604696C13.1269 2.86854 10.4842 6.46553 8.71488 9.08429C6.79154 11.9309 5.45636 14.2689 5.4431 14.2922C5.41304 14.345 5.36964 14.3889 5.31724 14.4196C5.26484 14.4503 5.2053 14.4667 5.14458 14.467L5.14229 14.4671Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      Завтраки
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="second">
+      <div class="container">
+        <form action="" class="model">
+          <h2 class="model__title">Будем рады <span>вашему</span> отзыву</h2>
+          <div class="model__groups">
+            <div class="model__group">
+              <label for="fullname" class="model__label">Имя и Фамилия</label>
+              <input
+                type="text"
+                name=""
+                id="fullname"
+                placeholder="Александрa Иванова"
+                class="model__input"
+              />
+            </div>
+            <div class="model__group">
+              <label for="city" class="model__label">Откуда вы</label>
+              <input
+                type="text"
+                name=""
+                id="city"
+                placeholder="Москва"
+                class="model__input"
+              />
+            </div>
+            <div class="model__group">
+              <label for="date" class="model__label">Когда летали (дата)</label>
+              <input
+                type="text"
+                name=""
+                id="date"
+                placeholder="10.10.23"
+                class="model__input"
+              />
+            </div>
+            <div class="model__group">
+              <label for="country" class="model__label"
+                >Куда летали (страна и отель)</label
+              >
+              <input
+                type="text"
+                name=""
+                id="country"
+                placeholder="Бали, Hanging Gardens "
+                class="model__input"
+              />
+            </div>
+            <div class="model__group">
+              <label for="feedback" class="model__label">Напишите отзыв</label>
+              <textarea
+                type="textarea"
+                name=""
+                id="feedback"
+                placeholder="Текст"
+                class="model__textarea"
+              ></textarea>
+            </div>
+          </div>
+          <button type="submit" class="model__button">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
