@@ -13,53 +13,59 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="filters">
+    <section class="first-form">
+      <!--filters-->
       <div class="container">
-        <form action="" class="model">
+        <form action="" class="first-form__filters">
+          <!--model-->
           <h2 class="filters__title">Фильтры</h2>
-          <div class="model__filters">
-            <div class="model__filter">
-              <p class="model__descr">показать цену</p>
-              <div class="model__groups-price">
-                <div class="model__group">
+          <div class="filters__list">
+            <!--model__filters-->
+            <div class="filter">
+              <!--model__filter-->
+              <p class="filter__description">показать цену</p>
+              <!--model__descr-->
+              <div class="filter__groups-price">
+                <!--model__groups-price"-->
+                <div class="filter__group">
                   <input
                     type="radio"
                     name="person"
                     id="person"
-                    class="model__radio"
+                    class="filter__radio"
                   />
-                  <label for="person" class="model__label"
-                    ><div class="model__custom-radio"></div>
+                  <label for="person" class="filter__label"
+                    ><div class="filter__custom-radio"></div>
                     на человека</label
                   >
                 </div>
-                <div class="model__group">
+                <div class="filter__group">
                   <input
                     type="radio"
                     name="person"
                     id="all"
-                    class="model__radio"
+                    class="filter__radio"
                   />
-                  <label for="all" class="model__label"
-                    ><div class="model__custom-radio"></div>
+                  <label for="all" class="filter__label"
+                    ><div class="filter__custom-radio"></div>
                     на всех</label
                   >
                 </div>
               </div>
 
-              <div class="model__filter">
-                <p class="model__descr">еда</p>
-                <div class="model__groups">
-                  <div class="model__group">
+              <div class="filter">
+                <p class="filter__description">еда</p>
+                <div class="filter__groups">
+                  <div class="filter__group">
                     <input
                       hidden
                       type="checkbox"
-                      class="model__checkbox"
+                      class="filter__checkbox"
                       id="2times"
                       name="food"
                     />
-                    <label class="model__label" for="2times">
-                      <div class="model__checkbox-custom">
+                    <label class="filter__label" for="2times">
+                      <div class="filter__checkbox-custom">
                         <svg
                           width="16"
                           height="15"
@@ -76,16 +82,16 @@
                       2-х разовое питание
                     </label>
                   </div>
-                  <div class="model__group">
+                  <div class="filter__group">
                     <input
                       hidden
                       type="checkbox"
-                      class="model__checkbox"
+                      class="filter__checkbox"
                       id="3times"
                       name="food"
                     />
-                    <label class="model__label" for="3times">
-                      <div class="model__checkbox-custom">
+                    <label class="filter__label" for="3times">
+                      <div class="filter__checkbox-custom">
                         <svg
                           width="16"
                           height="15"
@@ -102,16 +108,16 @@
                       3-разовое питание
                     </label>
                   </div>
-                  <div class="model__group">
+                  <div class="filter__group">
                     <input
                       hidden
                       type="checkbox"
-                      class="model__checkbox"
+                      class="filter__checkbox"
                       id="allin"
                       name="food"
                     />
-                    <label class="model__label" for="allin">
-                      <div class="model__checkbox-custom">
+                    <label class="filter__label" for="allin">
+                      <div class="filter__checkbox-custom">
                         <svg
                           width="16"
                           height="15"
@@ -128,16 +134,16 @@
                       Все включено
                     </label>
                   </div>
-                  <div class="model__group">
+                  <div class="filter__group">
                     <input
                       hidden
                       type="checkbox"
-                      class="model__checkbox"
+                      class="filter__checkbox"
                       id="no"
                       name="food"
                     />
-                    <label class="model__label" for="no">
-                      <div class="model__checkbox-custom">
+                    <label class="filter__label" for="no">
+                      <div class="filter__checkbox-custom">
                         <svg
                           width="16"
                           height="15"
@@ -154,16 +160,16 @@
                       Без еды
                     </label>
                   </div>
-                  <div class="model__group">
+                  <div class="filter__group">
                     <input
                       hidden
                       type="checkbox"
-                      class="model__checkbox"
+                      class="filter__checkbox"
                       id="fr"
                       name="food"
                     />
-                    <label class="model__label" for="fr">
-                      <div class="model__checkbox-custom">
+                    <label class="filter__label" for="fr">
+                      <div class="filter__checkbox-custom">
                         <svg
                           width="16"
                           height="15"
@@ -187,43 +193,45 @@
         </form>
       </div>
     </section>
-    <section class="second">
+    <section class="second-form">
       <div class="container">
-        <form action="" class="model">
-          <h2 class="model__title">Будем рады <span>вашему</span> отзыву</h2>
-          <div class="model__groups">
-            <div class="model__group">
-              <label for="fullname" class="model__label">Имя и Фамилия</label>
+        <form action="" class="second-form__review">
+          <h2 class="review__title">Будем рады <span>вашему</span> отзыву</h2>
+          <div class="review__groups">
+            <div class="review__group">
+              <label for="fullname" class="review__label">Имя и Фамилия</label>
               <input
                 type="text"
                 name=""
                 id="fullname"
                 placeholder="Александрa Иванова"
-                class="model__input"
+                class="review__input"
               />
             </div>
-            <div class="model__group">
-              <label for="city" class="model__label">Откуда вы</label>
+            <div class="review__group">
+              <label for="city" class="review__label">Откуда вы</label>
               <input
                 type="text"
                 name=""
                 id="city"
                 placeholder="Москва"
-                class="model__input"
+                class="review__input"
               />
             </div>
-            <div class="model__group">
-              <label for="date" class="model__label">Когда летали (дата)</label>
+            <div class="review__group">
+              <label for="date" class="review__label"
+                >Когда летали (дата)</label
+              >
               <input
                 type="text"
                 name=""
                 id="date"
                 placeholder="10.10.23"
-                class="model__input"
+                class="review__input"
               />
             </div>
-            <div class="model__group">
-              <label for="country" class="model__label"
+            <div class="review__group">
+              <label for="country" class="review__label"
                 >Куда летали (страна и отель)</label
               >
               <input
@@ -231,21 +239,21 @@
                 name=""
                 id="country"
                 placeholder="Бали, Hanging Gardens "
-                class="model__input"
+                class="review__input"
               />
             </div>
-            <div class="model__group">
-              <label for="feedback" class="model__label">Напишите отзыв</label>
+            <div class="review__group">
+              <label for="feedback" class="review__label">Напишите отзыв</label>
               <textarea
                 type="textarea"
                 name=""
                 id="feedback"
                 placeholder="Текст"
-                class="model__textarea"
+                class="review__textarea"
               ></textarea>
             </div>
           </div>
-          <button type="submit" class="model__button">Отправить</button>
+          <button type="submit" class="second-form__button">Отправить</button>
         </form>
       </div>
     </section>
