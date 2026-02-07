@@ -1,0 +1,16 @@
+@use "abstracts/mixins" as *; 
+
+@use "base/reset";
+
+.container{
+    width: 100%;
+    height: 100vh;
+    @include respond-to(tablet){
+        width: 750px;
+        background-color: blue;
+    }
+    @include respond-to(desktop){
+        width: 970px;
+        background-color: green;
+    }
+}
