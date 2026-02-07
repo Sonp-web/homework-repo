@@ -1,0 +1,111 @@
+@use "abstracts/mixins" as *;
+
+@use "base/reset";
+
+.page {
+  background: url("/homework-repo/homework-17/Frame 1261153404.png") no-repeat
+    center center;
+  background-size: cover; /* Высота 100%, ширина автоматически */
+  background-color: #f0f0f0;
+  padding: 72px 0;
+  @include respond-to(tablet) {
+    padding: 50px 0;
+  }
+  @include respond-to(desktop) {
+    padding: 123.5px 0;
+  }
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 120%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8px;
+    @include respond-to(tablet) {
+      font-size: 48px;
+      line-height: 100%;
+    }
+    @include respond-to(desktop) {
+      font-size: 60px;
+    }
+  }
+  &__description {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 24px;
+    @include respond-to(tablet) {
+      font-size: 18px;
+      line-height: 156%;
+      width: 380px;
+      margin: 0 auto 24px;
+    }
+    @include respond-to(desktop) {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 133%;
+      width: 674px;
+    }
+  }
+  &__group {
+    display: flex;
+    margin: 0 auto;
+    @include respond-to(tablet) {
+      max-width: 653px;
+    }
+  }
+  &__input {
+    border: 1px solid #e7e7e7;
+    padding: 12px;
+    height: 48px;
+    display: block;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    color: #393939;
+    @include respond-to(tablet) {
+      font-size: 14px;
+      line-height: 171%;
+    }
+  }
+  &__submit {
+    border: 0px solid #e7e7e7;
+    padding: 16px;
+    height: 48px;
+    min-width: 110px;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.12),
+      inset 0 -1px 0 0 rgba(0, 0, 0, 0.08);
+    background: #010101;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    @include respond-to(tablet) {
+      min-width: 126px;
+      font-size: 18px;
+      line-height: 156%;
+    }
+  }
+}
+.container {
+  padding: 0 35px;
+  @include respond-to(tablet) {
+    padding: 0 70px;
+  }
+  @include respond-to(desktop) {
+    padding: 0 395.47px;
+  }
+}
