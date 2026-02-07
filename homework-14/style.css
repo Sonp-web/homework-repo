@@ -101,7 +101,6 @@ img {
 }
 .page {
   padding: 143px 0 209px;
-  height: 653px;
   background: #0f0f0f;
 }
 .container {
@@ -111,7 +110,6 @@ img {
   background: #c2b4a3;
   border-radius: 16px;
   padding: 50px 30px;
-  height: 301px;
   position: relative;
   overflow: hidden;
 }
@@ -164,8 +162,8 @@ img {
   right: -95px;
   top: -137px;
   z-index: 0;
-  max-width: 306px;
-  max-height: 306px;
+  width: 306px;
+  height: 306px;
 }
 @media (min-width: 1024px) {
   .page {
@@ -195,8 +193,8 @@ img {
     height: 24px;
   }
   .page__background-icon {
-    max-height: 623px;
-    max-width: 623px;
+    height: 623px;
+    width: 623px;
     right: -52px;
     top: -246px;
   }
@@ -211,7 +209,6 @@ img {
   .page__wrapper {
     border-radius: 16px;
     padding: 80px 120px 80px 80px;
-    height: 278px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -253,7 +250,6 @@ img {
   .page__wrapper {
     border-radius: 20px;
     padding: 100px 142px 100px 100px;
-    height: 340px;
   }
   .page__title {
     font-size: 58px;
