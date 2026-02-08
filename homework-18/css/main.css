@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: "Alexandria", sans-serif;
+  background: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 80px;
+  color: #999;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+.header__btns {
+  display: flex;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.logo {
+  display: flex;
+  color: #e5e5e5;
+  gap: 11px;
+  align-items: center;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+.logo svg {
+  fill: #9dff3a;
+}
+
+.header__open-mobile {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.nav__link-active {
+  color: #e5e5e5;
+}
+
+.btn {
+  padding: 10px 24px;
+  height: 40px;
+  color: #e5e5e5;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.btn__try-for-free {
+  border-radius: 40px;
+  background: #9dff3a;
+  color: #000;
+}
+.btn__start {
+  border-radius: 40px;
+  padding: 14px 24px;
+  height: 50px;
+  background: #9dff3a;
+  color: #000;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.btn__watch-video {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e5e5e5;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  border: 1px solid #999;
+  border-radius: 40px;
+  height: 52px;
+  backdrop-filter: blur(40px);
+}
+
+.subtitle {
+  color: #9dff3a;
+  border: 1px solid #999;
+  border-radius: 24px;
+  padding: 10px;
+  max-width: 137px;
+  backdrop-filter: blur(40px);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.banner {
+  background: #000;
+}
+.banner__subtitle svg {
+  margin-right: 9px;
+}
+.banner__wrapper {
+  display: flex;
+  padding: 88px 0;
+}
+.banner__left {
+  padding: 69.5px 0;
+}
+.banner__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 688px;
+  margin-bottom: 40px;
+}
+.banner__btns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.banner__right {
+  width: 512px;
+  height: 512px;
+}
+.banner__title {
+  margin-right: 27px;
+  text-transform: capitalize;
+  color: #e5e5e5;
+  font-size: 64px;
+  line-height: 70.4px;
+  font-weight: 700;
+}
+.banner__description {
+  font-family: "Inter", sans-serif;
+  margin-right: 105px;
+  color: #999;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.partners {
+  padding: 40px 0;
+  height: 172px;
+  background: #0f0f0f;
+}
+.partners .container {
+  max-width: 950px;
+}
+.partners__description {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.partners__wrap {
+  height: 32px;
+  display: flex;
+  gap: 72px;
+}
+
+.features {
+  padding: 80px 0;
+}
+.features__subtitle {
+  padding: 12px 20px;
+  max-width: 100px;
+  height: 41px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.features__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.features .feature__item {
+  border-radius: 12px;
+  padding: 48px 36px;
+  max-width: 384px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #999;
+}
+.features .feature__wrapper-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+.features .feature__title {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: #e5e5e5;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.features .feature__description {
+  font-family: "Alexandria", sans-serif;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.title {
+  font-family: "Alexandria", sans-serif;
+  text-align: center;
+  color: #e5e5e5;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  margin: 0 auto;
+  max-width: 644px;
+  text-align: center;
+  color: #999;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+.statistics {
+  background: #0f0f0f;
+  padding: 120px 0;
+}
+.statistics__subtitle {
+  padding: 12px 20px;
+  max-width: 104px;
+  margin: 0 auto 20px;
+}
+.statistics__description {
+  margin-bottom: 72px;
+}
+.statistics__wrapper {
+  max-width: 484px;
+  display: flex;
+  flex-direction: row;
+  gap: 72px;
+  margin: 0 auto;
+}
+.statistics .stat__title {
+  font-family: "Alexandria", sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+  color: #9dff3a;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.statistics .stat__description {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: #999;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.peculiarity {
+  padding: 60px 0;
+}
+.peculiarity__subtitle {
+  max-width: 94px;
+  padding: 12px 20px;
+  margin: 0 auto 20px;
+}
+.peculiarity__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.peculiarity__main-icon {
+  max-width: 506px;
+  margin: 21px 0;
+}
+.peculiarity__right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.peculiarity .specificity {
+  border-radius: 20px;
+  padding: 30px 20px;
+  background: #0f0f0f;
+  border: 1px solid #999;
+  display: flex;
+  gap: 24px;
+}
+.peculiarity .specificity__title {
+  font-family: "Inter", sans-serif;
+  color: #e5e5e5;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.peculiarity .specificity__wrapper-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.peculiarity .specificity__content {
+  max-width: 528px;
+}
+.peculiarity .specificity__description {
+  font-family: "Alexandria", sans-serif;
+  color: #999;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=main.css.map */

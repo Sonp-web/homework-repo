@@ -1,0 +1,305 @@
+@use "abstract/mixins" as *;
+@use "abstract/variables" as *;
+@use "base/reset";
+
+body {
+  font-family: "Alexandria", sans-serif;
+  background: $color-black;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 80px;
+  color: $text-color-gray;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px 0;
+    justify-content: space-between;
+  }
+  &__btns {
+    display: flex;
+    gap: 16px;
+    @include font(16px, 16px, 400);
+  }
+}
+.logo {
+  display: flex;
+  color: $text-color-white;
+  gap: 11px;
+  align-items: center;
+  @include font(22px, 22px, 500);
+  text-align: center;
+  svg {
+    fill: $main-color;
+  }
+}
+.header__open-mobile {
+  display: none;
+}
+.nav {
+  display: flex;
+  gap: 40px;
+  text-align: center;
+  @include font(16px, 16px, 400);
+  &__link {
+    &-active {
+      color: $text-color-white;
+    }
+  }
+}
+.btn {
+  padding: 10px 24px;
+  height: 40px;
+  color: $text-color-white;
+  @include font(16px, 20px, 400);
+  &__try-for-free {
+    border-radius: 40px;
+    background: $main-color;
+    color: $color-black;
+  }
+  &__start {
+    border-radius: 40px;
+    padding: 14px 24px;
+    height: 50px;
+    background: $main-color;
+    color: $color-black;
+    @include font(18px, 20px, 400);
+  }
+  &__watch-video {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: $text-color-white;
+    @include font(18px, 20px, 400);
+    border: 1px solid $text-color-gray;
+    border-radius: 40px;
+    height: 52px;
+    backdrop-filter: blur(40px);
+  }
+}
+.subtitle {
+  color: $main-color;
+  border: 1px solid $text-color-gray;
+  border-radius: 24px;
+  padding: 10px;
+  max-width: 137px;
+  backdrop-filter: blur(40px);
+  @include font(14px, 16px, 400);
+}
+.banner {
+  background: $color-black;
+  &__subtitle {
+    svg {
+      margin-right: 9px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    padding: 88px 0;
+  }
+  &__left {
+    padding: 69.5px 0;
+  }
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 688px;
+    margin-bottom: 40px;
+  }
+  &__btns {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &__right {
+    width: 512px;
+    height: 512px;
+  }
+  &__title {
+    margin-right: 27px;
+    text-transform: capitalize;
+    color: $text-color-white;
+    @include font(64px, 70.4px, 700);
+  }
+  &__description {
+    font-family: "Inter", sans-serif;
+    margin-right: 105px;
+    color: $text-color-gray;
+    @include font(20px, 28px, 400);
+  }
+}
+.partners {
+  padding: 40px 0;
+  height: 172px;
+  background: $color-gray;
+  .container {
+    max-width: 950px;
+  }
+  &__description {
+    text-align: center;
+    color: $text-color-gray;
+    @include font(16px, 16px, 400);
+    margin-bottom: 40px;
+  }
+  &__wrap {
+    height: 32px;
+    display: flex;
+    gap: 72px;
+  }
+}
+.features {
+  padding: 80px 0;
+  &__subtitle {
+    padding: 12px 20px;
+    max-width: 100px;
+    height: 41px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+  .feature {
+    &__item {
+      border-radius: 12px;
+      padding: 48px 36px;
+      max-width: 384px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid $text-color-gray;
+    }
+    &__wrapper-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      margin-bottom: 36px;
+    }
+    &__title {
+      font-family: "Inter", sans-serif;
+      text-align: center;
+      color: $text-color-white;
+      @include font(20px, 28px, 400);
+      margin-bottom: 16px;
+    }
+    &__description {
+      font-family: "Alexandria", sans-serif;
+      text-align: center;
+      color: $text-color-gray;
+      @include font(16px, 20px, 400);
+    }
+  }
+}
+.title {
+  font-family: "Alexandria", sans-serif;
+  text-align: center;
+  color: $text-color-white;
+  @include font(48px, 48px, 400);
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.description {
+  font-family: "Inter", sans-serif;
+  margin: 0 auto;
+  max-width: 644px;
+  text-align: center;
+  color: $text-color-gray;
+  @include font(18px, 25px, 400);
+  margin-bottom: 80px;
+}
+
+.statistics {
+  background: #0f0f0f;
+  padding: 120px 0;
+  &__subtitle {
+    padding: 12px 20px;
+    max-width: 104px;
+    margin: 0 auto 20px;
+  }
+  &__description {
+    margin-bottom: 72px;
+  }
+  &__wrapper {
+    max-width: 484px;
+    display: flex;
+    flex-direction: row;
+    gap: 72px;
+    margin: 0 auto;
+  }
+  .stat {
+    &__title {
+      font-family: "Alexandria", sans-serif;
+      text-transform: capitalize;
+      text-align: center;
+      color: $main-color;
+      @include font(48px, 48px, 400);
+      margin-bottom: 20px;
+    }
+    &__description {
+      font-family: "Inter", sans-serif;
+      text-align: center;
+      color: $text-color-gray;
+      @include font(20px, 28px, 400);
+    }
+  }
+}
+.peculiarity {
+  padding: 60px 0;
+  &__subtitle {
+    max-width: 94px;
+    padding: 12px 20px;
+    margin: 0 auto 20px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__main-icon {
+    max-width: 506px;
+    margin: 21px 0;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .specificity {
+    border-radius: 20px;
+    padding: 30px 20px;
+    background: $color-gray;
+    border: 1px solid $text-color-gray;
+    display: flex;
+    gap: 24px;
+    &__title {
+      font-family: "Inter", sans-serif;
+      color: $text-color-white;
+      @include font(20px, 28px, 400);
+      margin-bottom: 8px;
+    }
+    &__wrapper-icon {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__content {
+      max-width: 528px;
+    }
+    &__description {
+      font-family: "Alexandria", sans-serif;
+      color: $text-color-gray;
+      @include font(16px, 20px, 400);
+    }
+  }
+}
