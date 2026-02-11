@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,11 +48,9 @@
             ><a href="#" class="nav__link">Testimonial</a
             ><a href="#" class="nav__link">FAQ</a>
           </nav>
-          <div class="header__btns">
-            <a href="" class="btn btn__log-in">Log in</a>
-            <a href="" class="btn btn__try-for-free">Try For Free</a>
-          </div>
           <div class="header__open-mobile">
+            <span></span>
+            <span></span>
             <span></span>
           </div>
         </div>
@@ -51,36 +59,15 @@
         <div class="banner__wrapper">
           <article class="banner__left">
             <div class="banner__text-wrapper">
-              <p class="subtitle banner__subtitle">
-                <svg
-                  width="9"
-                  height="9"
-                  viewBox="0 0 9 9"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle cx="4.5" cy="4.5" r="4.5" fill="#9DFF3A" /></svg
-                >Decentralised
-              </p>
+              <p class="subtitle banner__subtitle">Decentralised</p>
               <h1 class="title banner__title">Revolutionizing Web3 Finance</h1>
               <p class="banner__description">
                 Secure, scalable, and decentralized solutions for your digital
                 assets—experience the future of financial freedom.
               </p>
             </div>
-            <div class="banner__btns">
+            <div class="banner__btn">
               <a href="" class="btn btn__start">Get Started</a>
-              <a href="" class="btn btn__watch-video"
-                ><svg
-                  width="11"
-                  height="14"
-                  viewBox="0 0 11 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 0V14L11 7L0 0Z" fill="#E5E5E5" /></svg
-                >Watch video</a
-              >
             </div>
           </article>
           <article class="banner__right">
@@ -92,7 +79,7 @@
     <section class="partners">
       <div class="container">
         <p class="partners__description">Satisfied partners</p>
-        <div class="partners__wrap">
+        <div class="partners__wrapper">
           <a href="#" class="partner"
             ><img src="media/Frame.png" alt="" class="partner__icon"
           /></a>
@@ -545,5 +532,117 @@
         </div>
       </div>
     </section>
+    <section class="revolutionary">
+      <div class="container">
+        <p class="subtitle revolutionary__subtitle">Revolutionary</p>
+        <h2 class="title revolutionary__title">
+          Enhance Your Design Workflow with Seamless Landing Pages
+        </h2>
+        <p class="description revolutionary__description">
+          Join a thriving community committed to safeguarding digital assets,
+          empowering your financial journey with trust, innovation, and security
+        </p>
+        <a href="" class="btn btn__start">Get Started</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer__nav">
+          <a href="#" class="logo"
+            ><svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16 32C24.8366 32 32 24.8365 32 16C32 7.16345 24.8366 0 16 0C7.16343 0 0 7.16345 0 16C0 24.8365 7.16343 32 16 32ZM20.9915 7.45347C21.2344 6.59044 20.3969 6.0801 19.632 6.62504L8.95449 14.2317C8.12497 14.8226 8.25545 16 9.15049 16H11.9622V15.9782H17.442L12.977 17.5537L11.0086 24.5465C10.7656 25.4096 11.6031 25.9199 12.368 25.3749L23.0455 17.7684C23.8751 17.1774 23.7445 16 22.8495 16H18.5857L20.9915 7.45347Z"
+                fill="#9DFF3A"
+              /></svg
+            >NeoFi</a
+          >
+          <div class="footer__column">
+            <p class="footer__title">Quick links</p>
+            <ul class="footer__list">
+              <a href="" class="footer__link">Home</a
+              ><a href="" class="footer__link">Features</a
+              ><a href="" class="footer__link">Community</a
+              ><a href="" class="footer__link">Support</a>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <p class="footer__title">Help</p>
+            <ul class="footer__list">
+              <a href="" class="footer__link">Help Centre</a
+              ><a href="" class="footer__link">FAQ</a
+              ><a href="" class="footer__link">Forum</a>
+            </ul>
+          </div>
+        </nav>
+        <form action="submit" class="footer__form">
+          <p class="footer__title-form">Join our mailing list for updates</p>
+          <div class="footer__modul">
+            <input
+              type="text"
+              class="footer__input"
+              placeholder="Your email address"
+              id="email"
+              name="email"
+            />
+            <button type="submit" class="footer__submit">
+              <svg
+                width="14"
+                height="11"
+                viewBox="0 0 14 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="footer__arrow"
+              >
+                <path
+                  d="M0.875 5.375H12.875M12.875 5.375L8.375 0.875M12.875 5.375L8.375 9.875"
+                  stroke="black"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+      <p class="footer__bottom">© 2025. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        centeredSlides: false,
+        spaceBetween: 30,
+        grabCursor: true,
+        slidesPerGroup: 1,
+
+        on: {
+          init: function (swiper) {
+            // Просто центрируем 2 слайда, Swiper сам покажет 4
+            swiper.params.slidesOffsetBefore = -swiper.width * 0.04; // Смещаем на 12.5%
+            swiper.params.slidesOffsetAfter = -swiper.width * 0.04;
+            swiper.update();
+          },
+          resize: function (swiper) {
+            swiper.params.slidesOffsetBefore = -swiper.width * 0.04;
+            swiper.params.slidesOffsetAfter = -swiper.width * 0.04;
+            swiper.update();
+          },
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>

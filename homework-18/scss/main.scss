@@ -9,16 +9,32 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  @include respond-to(mobile) {
+    padding: 0 20px;
+  }
+}
+.title {
+  font-family: "Alexandria", sans-serif;
+  text-align: center;
+  color: $text-color-white;
+  @include font(48px, 48px, 400);
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  @include respond-to(mobile) {
+    @include font(28px, 28px, 400);
+    margin-bottom: 16px;
+  }
 }
 
 .header {
-  height: 80px;
+  padding: 20px 0;
   color: $text-color-gray;
+  @include respond-to(mobile) {
+  }
   .container {
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding: 20px 0;
     justify-content: space-between;
   }
   &__btns {
@@ -40,18 +56,41 @@ body {
 }
 .header__open-mobile {
   display: none;
+  @include respond-to(mobile) {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    flex-direction: column;
+    gap: 3px;
+    padding: 6px 3px;
+    span {
+      position: relative;
+      &::before {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 0;
+        border: 1px solid $main-color;
+        position: relative;
+      }
+    }
+  }
 }
 .nav {
   display: flex;
   gap: 40px;
   text-align: center;
   @include font(16px, 16px, 400);
+  @include respond-to(mobile) {
+    display: none;
+  }
   &__link {
     &-active {
       color: $text-color-white;
     }
   }
 }
+
 .btn {
   padding: 10px 24px;
   height: 40px;
@@ -76,7 +115,7 @@ body {
     gap: 6px;
     color: $text-color-white;
     @include font(18px, 20px, 400);
-    border: 1px solid $text-color-gray;
+    border: 1px solid $color-border;
     border-radius: 40px;
     height: 52px;
     backdrop-filter: blur(40px);
@@ -84,26 +123,49 @@ body {
 }
 .subtitle {
   color: $main-color;
-  border: 1px solid $text-color-gray;
+  border: 1px solid $color-border;
   border-radius: 24px;
-  padding: 10px;
-  max-width: 137px;
+  padding: 12px 20px;
+  margin: 0 auto 20px;
+
+  text-transform: capitalize;
   backdrop-filter: blur(40px);
   @include font(14px, 16px, 400);
 }
 .banner {
   background: $color-black;
   &__subtitle {
-    svg {
-      margin-right: 9px;
+    margin: 0;
+    max-width: 120px;
+    padding: 10px 12px;
+    @include respond-to(mobile) {
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    color: $text-color-white;
+    font-family: "Alexandria", sans-serif;
+    text-transform: capitalize;
+    @include font(64px, 70px, 700);
+    text-align: left;
+    margin-bottom: 0;
+    @include respond-to(mobile) {
+      @include font(40px, 44px, 500);
+      text-align: center;
     }
   }
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
     padding: 88px 0;
+    justify-content: center;
+    @include respond-to(mobile) {
+      padding: 40px 0;
+      gap: 32px;
+    }
   }
   &__left {
-    padding: 69.5px 0;
+    align-content: center;
   }
   &__text-wrapper {
     display: flex;
@@ -111,35 +173,46 @@ body {
     gap: 24px;
     max-width: 688px;
     margin-bottom: 40px;
+    @include respond-to(mobile) {
+      gap: 16px;
+      margin-bottom: 32px;
+    }
   }
-  &__btns {
+  &__btn {
     display: flex;
-    gap: 20px;
     align-items: center;
+    @include respond-to(mobile) {
+      justify-content: center;
+    }
   }
   &__right {
-    width: 512px;
-    height: 512px;
-  }
-  &__title {
-    margin-right: 27px;
-    text-transform: capitalize;
-    color: $text-color-white;
-    @include font(64px, 70.4px, 700);
+    @include respond-to(mobile) {
+      padding: 0 31px;
+    }
   }
   &__description {
     font-family: "Inter", sans-serif;
     margin-right: 105px;
     color: $text-color-gray;
     @include font(20px, 28px, 400);
+    @include respond-to(mobile) {
+      margin-right: 0;
+      text-align: center;
+      @include font(16px, 20px, 400);
+    }
   }
 }
 .partners {
   padding: 40px 0;
-  height: 172px;
   background: $color-gray;
   .container {
     max-width: 950px;
+    @include respond-to(mobile) {
+      padding: 0 36px;
+    }
+  }
+  .partner__icon {
+    margin: 0 auto;
   }
   &__description {
     text-align: center;
@@ -147,35 +220,64 @@ body {
     @include font(16px, 16px, 400);
     margin-bottom: 40px;
   }
-  &__wrap {
-    height: 32px;
-    display: flex;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 72px;
+    @include respond-to(mobile) {
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 20px;
+      row-gap: 16.2px;
+      @for $i from 1 through 5 {
+        .partner:nth-child(#{$i}) {
+          grid-column: #{$i} / #{$i + 2};
+          @if $i%2==1 {
+            grid-row: 1;
+          } @else {
+            grid-row: 2;
+          }
+        }
+      }
+    }
   }
 }
 .features {
   padding: 80px 0;
+  @include respond-to(mobile) {
+    padding: 40px 0;
+  }
   &__subtitle {
     padding: 12px 20px;
     max-width: 100px;
     height: 41px;
     margin: 0 auto;
     margin-bottom: 20px;
+    @include respond-to(mobile) {
+      margin-bottom: 16px;
+    }
   }
 
   &__wrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
+    @include respond-to(mobile) {
+      gap: 16px;
+    }
   }
   .feature {
-    &__item {
-      border-radius: 12px;
-      padding: 48px 36px;
-      max-width: 384px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid $text-color-gray;
+    border-radius: 12px;
+    padding: 48px 36px;
+    max-width: 384px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid $color-border;
+    @include respond-to(mobile) {
+      padding: 30px 24px;
     }
+
     &__wrapper-icon {
       width: 48px;
       height: 48px;
@@ -200,14 +302,7 @@ body {
     }
   }
 }
-.title {
-  font-family: "Alexandria", sans-serif;
-  text-align: center;
-  color: $text-color-white;
-  @include font(48px, 48px, 400);
-  margin-bottom: 20px;
-  text-transform: capitalize;
-}
+
 .description {
   font-family: "Inter", sans-serif;
   margin: 0 auto;
@@ -216,11 +311,19 @@ body {
   color: $text-color-gray;
   @include font(18px, 25px, 400);
   margin-bottom: 80px;
+  @include respond-to(mobile) {
+    @include font(16px, 20px, 400);
+    font-family: "Alexandria", sans-serif;
+    margin-bottom: 32px;
+  }
 }
 
 .statistics {
   background: #0f0f0f;
   padding: 120px 0;
+  @include respond-to(mobile) {
+    padding: 40px 0;
+  }
   &__subtitle {
     padding: 12px 20px;
     max-width: 104px;
@@ -228,13 +331,22 @@ body {
   }
   &__description {
     margin-bottom: 72px;
+    @include respond-to(mobile) {
+      @include font(14px, 17px, 400);
+      margin-bottom: 32px;
+    }
   }
   &__wrapper {
     max-width: 484px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 72px;
     margin: 0 auto;
+    @include respond-to(mobile) {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
   .stat {
     &__title {
@@ -255,6 +367,15 @@ body {
 }
 .peculiarity {
   padding: 60px 0;
+  @include respond-to(mobile) {
+    padding: 40px 0;
+  }
+  &__description {
+    @include respond-to(mobile) {
+      font-family: "Inter", sans-serif;
+      text-align: center;
+    }
+  }
   &__subtitle {
     max-width: 94px;
     padding: 12px 20px;
@@ -263,23 +384,42 @@ body {
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    @include respond-to(mobile) {
+      gap: 32px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    @include respond-to(mobile) {
+      padding: 0 31px;
+    }
   }
   &__main-icon {
-    max-width: 506px;
-    margin: 21px 0;
+    margin: 0 auto;
   }
   &__right {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    @include respond-to(mobile) {
+      gap: 16px;
+    }
   }
   .specificity {
     border-radius: 20px;
     padding: 30px 20px;
     background: $color-gray;
-    border: 1px solid $text-color-gray;
+    border: 1px solid $color-border;
     display: flex;
     gap: 24px;
+    @include respond-to(mobile) {
+      padding: 24px 19px;
+      gap: 20px;
+    }
     &__title {
       font-family: "Inter", sans-serif;
       color: $text-color-white;
@@ -287,11 +427,12 @@ body {
       margin-bottom: 8px;
     }
     &__wrapper-icon {
-      width: 30px;
-      height: 30px;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
     }
     &__content {
       max-width: 528px;
@@ -300,6 +441,275 @@ body {
       font-family: "Alexandria", sans-serif;
       color: $text-color-gray;
       @include font(16px, 20px, 400);
+      @include respond-to(mobile) {
+        @include font(14px, 17px, 400);
+      }
     }
+  }
+}
+.testimonial {
+  padding: 80px 0 150px;
+  background: $color-gray;
+  &__subtitle {
+    padding: 12px 20px;
+    max-width: 121px;
+    margin: 0 auto 20px;
+  }
+  .__description {
+    margin-bottom: 72px;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 373px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.answers {
+  padding: 80px 0;
+  &__subtitle {
+    padding: 12px 20px;
+    max-width: 70px;
+    margin: 0 auto 20px;
+  }
+  &__description {
+    margin-bottom: 72px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    max-width: 792px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+  .answer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $color-border;
+    padding: 16px 20px;
+    &__ask {
+      font-family: "Alexandria", sans-serif;
+      color: $text-color-white;
+      @include font(16px, 18px, 400);
+    }
+    &__plus {
+      width: 20px;
+      height: 20px;
+      position: relative; // Добавляем relative для позиционирования псевдоэлементов
+
+      span {
+        display: block;
+        position: relative; // Меняем на absolute для центрирования
+        width: 100%;
+        height: 100%;
+      }
+
+      span::before {
+        display: block;
+        content: "";
+        position: absolute;
+        border-right: 2px solid #fff;
+        width: 0;
+        height: 20px;
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(
+          -50%,
+          -50%
+        ); // Центрируем и поворачиваем на 90 градусов
+      }
+
+      span::after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // Центрируем
+      }
+    }
+  }
+}
+.revolutionary {
+  background-color: $color-gray;
+  padding: 80px 0;
+  @include respond-to(mobile) {
+    padding: 40px 0;
+    font-family: "Inter", sans-serif;
+  }
+  &__subtitle {
+    max-width: 137px;
+  }
+  &__title {
+    max-width: 878px;
+    margin: 0 auto 20px;
+  }
+  &__description {
+    margin-bottom: 20px;
+    @include respond-to(mobile) {
+    }
+  }
+  .btn__start {
+    display: block;
+    max-width: 151px;
+    border-radius: 0;
+    margin: 0 auto;
+    font-family: "Alexandria", sans-serif;
+  }
+}
+.footer {
+  padding: 80px 0 40px;
+  position: relative;
+  @include respond-to(mobile) {
+    padding: 40px 0 20px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @include respond-to(mobile) {
+      flex-direction: column;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    gap: 198.5px;
+    align-items: self-start;
+    @include respond-to(mobile) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 40px;
+    }
+  }
+  &__form {
+    max-width: 385px;
+    @include respond-to(mobile) {
+      flex-shrink: 0;
+      width: 100%;
+    }
+  }
+  &__title {
+    font-family: "Inter", sans-serif;
+    color: $text-color-white;
+    @include font(20px, 28px, 400);
+    margin-bottom: 24px;
+    @include respond-to(mobile) {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @include respond-to(mobile) {
+      align-items: center;
+    }
+  }
+  &__link {
+    font-family: "Alexandria", sans-serif;
+    color: $text-color-gray;
+    @include font(14px, 16px, 400);
+  }
+
+  &__title-form {
+    font-family: "Inter", sans-serif;
+    max-width: 198px;
+    color: #d8d8d8;
+    margin-bottom: 20px;
+    @include font(20px, 28px, 400);
+    @include respond-to(mobile) {
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+  &__modul {
+    display: flex;
+    justify-content: space-between;
+    width: 385px;
+    grid-template-columns: 1fr 40px;
+    position: relative;
+    @include respond-to(mobile) {
+      width: 100%;
+    }
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      border: 0.5px solid #999;
+      width: 385px;
+      height: 0px;
+      bottom: -16px;
+      @include respond-to(mobile) {
+        width: 100%;
+      }
+    }
+  }
+  &__input {
+    display: block;
+    font-family: "Alexandria", sans-serif;
+    color: $text-color-gray;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: $color-black;
+    position: relative;
+    width: 100%;
+    @include font(14px, 20px, 400);
+    &::before {
+      display: block;
+      content: "";
+      border: 0.5px solid $main-color;
+      width: 100%;
+      height: 12px;
+      position: absolute;
+    }
+  }
+
+  &__submit {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    display: block;
+    background-color: $main-color;
+    flex-shrink: 0;
+    width: 40px;
+  }
+  &__bottom {
+    font-family: "Alexandria", sans-serif;
+    color: $text-color-gray;
+    @include font(12px, 14px, 400);
+    display: block;
+    text-align: center;
   }
 }
