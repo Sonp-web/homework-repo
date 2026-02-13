@@ -3,9 +3,8 @@
 @use "base/reset";
 
 .page {
-  background: url("/homework-repo/homework-17/Frame 1261153404.png") no-repeat
-    center center;
-  background-size: cover; /* Высота 100%, ширина автоматически */
+  background: url("/homework-17/Frame 1261153404.png") no-repeat center center;
+  background-size: cover;
   background-color: #f0f0f0;
   padding: 72px 0;
   @include respond-to(tablet) {
@@ -42,14 +41,14 @@
     @include respond-to(tablet) {
       font-size: 18px;
       line-height: 156%;
-      width: 380px;
+      max-width: 380px;
       margin: 0 auto 24px;
     }
     @include respond-to(desktop) {
       font-weight: 500;
       font-size: 24px;
       line-height: 133%;
-      width: 674px;
+      max-width: 674px;
     }
   }
   &__group {
@@ -62,7 +61,6 @@
   &__input {
     border: 1px solid #e7e7e7;
     padding: 12px;
-    height: 48px;
     display: block;
     width: 100%;
     font-family: "Open Sans", sans-serif;
@@ -78,7 +76,6 @@
   &__submit {
     border: 0px solid #e7e7e7;
     padding: 16px;
-    height: 48px;
     min-width: 110px;
     box-shadow:
       0 1px 2px 0 rgba(0, 0, 0, 0.12),
@@ -106,6 +103,7 @@
     padding: 0 70px;
   }
   @include respond-to(desktop) {
-    padding: 0 395.47px;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 }
