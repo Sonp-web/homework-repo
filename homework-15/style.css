@@ -54,13 +54,12 @@ body {
 }
 .page {
   padding: 329px 0px;
-  max-width: 1678px;
-  height: 1725px;
-  margin: 0 auto;
   background: #1b2316;
 }
 .container {
   padding: 0 39px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .swiper {
   width: 100%;
@@ -73,18 +72,18 @@ body {
   background: #444;
   position: relative;
   border-radius: 92px;
-  height: 755px;
   display: grid;
   grid-template-columns: 1fr 700px;
   background: rgba(255, 255, 255, 0.05);
   padding: 137px 62px;
+  column-gap: 50px;
 }
 .slide__img {
-  width: 877px;
-  height: 877px;
+  width: 57%;
   position: absolute;
   left: -47px;
   top: -122px;
+  aspect-ratio: 1/1;
 }
 .slide__text {
   display: flex;
@@ -105,8 +104,6 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 .slide__button {
-  width: 217px;
-  height: 64px;
   opacity: 0.75;
   padding: 15px 60px;
   font-weight: 400;
