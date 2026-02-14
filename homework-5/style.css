@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.icons {
+  padding: 200px 0;
+}
+.icons__wrapper {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.icons__item {
+  flex: 1 1 288px;
+  padding: 30px 50px;
+  border: 0.1px solid gray;
+}
+.icons__img {
+  margin-bottom: 20px;
+  max-height: 30px;
+}
+.icons__descr {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #292d33;
+}
