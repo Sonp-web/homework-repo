@@ -1,0 +1,45 @@
+.cards {
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 100px;
+}
+.card {
+  background-color: gray;
+}
+.second {
+  height: 200px;
+  display: grid;
+  grid-template-columns: 100px 100px 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.item {
+  background-color: green;
+}
+.third {
+  height: 500px;
+  display: grid;
+  grid-template-areas:
+    "H H H"
+    "S C C"
+    "F F F";
+  gap: 10px;
+}
+.header {
+  grid-area: H;
+  background-color: red;
+}
+.sidebar {
+  grid-area: S;
+  background-color: black;
+}
+.content {
+  grid-area: C;
+  background-color: green;
+}
+.footer {
+  grid-area: F;
+  background-color: blue;
+}
