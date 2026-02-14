@@ -1,0 +1,256 @@
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* РЈР±РёСЂР°РµРј РІРЅРµС€РЅРёРµ РѕС‚СЃС‚СѓРїС‹ */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* РЈР±РёСЂР°РµРј РІРЅСѓС‚СЂРµРЅРЅРёРµ РѕС‚СЃС‚СѓРїС‹ */
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+/* РЎР±СЂР°СЃС‹РІР°РµРј СЃС‚РёР»Рё СЃСЃС‹Р»РѕРє */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* РќР°СЃР»РµРґСѓРµРј С€СЂРёС„С‚С‹ РґР»СЏ С„РѕСЂРј */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* РР·РѕР±СЂР°Р¶РµРЅРёСЏ */
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  padding: 124px 300px;
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: #1d2026;
+  font-weight: 600;
+}
+.container {
+  padding: 0 300px;
+}
+.animate {
+  padding: 124px 0;
+}
+.animate__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.card__title {
+  font-size: 48px;
+  line-height: 108%;
+  letter-spacing: -0.02em;
+  margin-bottom: 25px;
+}
+.card__title-item {
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+.card__button {
+  padding: 0px 24px;
+  height: 48px;
+  font-size: 16px;
+  line-height: 300%;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  color: #fff;
+  border: none;
+  transition:
+    background-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+.card__buttons {
+  display: flex;
+  gap: 16px;
+}
+.card__buttons-orange {
+  .card__button {
+    background: #ff6636;
+  }
+  .card__button:hover {
+    box-shadow: 0 6px 20px 0 rgba(204, 82, 43, 0.5);
+    background: #cc522b;
+  }
+
+  .card__button:disabled {
+    background: #ffddd1;
+  }
+}
+.card__button-blue {
+  .card__button {
+    background: #564ffd;
+  }
+  .card__button:hover {
+    box-shadow: 0 6px 20px 0 rgba(69, 63, 202, 0.5);
+    background: #453fca;
+  }
+
+  .card__button:disabled {
+    background: #cdcbfe;
+  }
+}
+.card__item:nth-of-type(1) {
+  margin-bottom: 40px;
+}
+.card__item:nth-of-type(2) {
+  margin-bottom: 65px;
+}
+.card__buttons-with-arrow {
+  display: grid;
+  grid-template-columns: 80px 80px;
+
+  gap: 24px;
+}
+.card__button-with-arrow {
+  position: relative;
+  padding: 4px 0px;
+  background: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  width: 80px;
+  display: inline-flex; /* или flex */
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: none;
+}
+.card__button-with-arrow_green {
+  color: #23bd33;
+}
+.card__button-with-arrow_red {
+  color: #e34444;
+}
+.card__button-with-arrow::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.card__button-with-arrow_green::before {
+  background-color: #23bd33;
+}
+.card__button-with-arrow_red::before {
+  background-color: #e34444;
+}
+.card__button-with-arrow:hover::before {
+  opacity: 1;
+}
+.form__title {
+  font-size: 20px;
+  line-height: 130%;
+  margin-bottom: 16px;
+}
+.form__list-input {
+  display: grid;
+  grid-template-columns: 312px 312px;
+  column-gap: 24px;
+  row-gap: 16px;
+  margin-bottom: 51px;
+}
+.form__input {
+  border: 1px solid #e9eaf0;
+  height: 48px;
+  padding: 12px 18px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #8c94a3;
+  outline: none;
+  transition: border 0.3s ease;
+}
+.form__input:hover {
+  border: 3px solid #ffddd1;
+}
+.form__input:focus {
+  border: 1px solid #ff6636;
+  color: #1d2026;
+}
+.form__input:active {
+  border: 1px solid #ff6636;
+}
+.form__item-dropdown-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157%;
+  letter-spacing: -0.01em;
+}
+
+.form__checkbox {
+  display: none;
+}
+.form__item-label {
+  display: block;
+  margin-top: 12px;
+  padding: 6px 18px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157%;
+  letter-spacing: -0.01em;
+  color: #4e5566;
+  height: 32px;
+  transition:
+    color 0.5s ease,
+    background 0.5s ease;
+}
+.form__item-label:hover {
+  color: #1d2026;
+  background: #ffeee8;
+}
+.form__checkbox:disabled + .form__item-label {
+  color: #b7bac7;
+}
+.form__list-dropdown {
+  display: grid;
+  grid-template-columns: 312px;
+  gap: 16px;
+}
+.form__item-label_icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+}
+.form__item-label_icon:hover {
+  color: #ff6636;
+}

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="animate">
+      <div class="container">
+        <div class="animate__cards">
+          <div class="card">
+            <h2 class="card__title">Buttons</h2>
+            <div class="card__item">
+              <h3 class="card__title-item">Primary/Primary</h3>
+              <div class="card__buttons card__buttons-orange">
+                <button class="card__button">Normal</button
+                ><button class="card__button">Hover</button
+                ><button class="card__button" disabled>Disable</button>
+              </div>
+            </div>
+            <div class="card__item">
+              <h3 class="card__title-item">Primary/Secondary</h3>
+              <div class="card__buttons card__button-blue">
+                <button class="card__button">Normal</button
+                ><button class="card__button">Hover</button
+                ><button class="card__button" disabled>Disable</button>
+              </div>
+            </div>
+            <div class="card__item card__item-simple">
+              <h3 class="card__title-item">Simple Buttons</h3>
+              <div class="card__buttons-with-arrow">
+                <button
+                  class="card__button-with-arrow card__button-with-arrow_green"
+                >
+                  Normal
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.75 12H20.25"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.5 5.25L20.25 12L13.5 18.75"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg></button
+                ><button
+                  class="card__button-with-arrow card__button-with-arrow_green"
+                >
+                  Hover<svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.75 12H20.25"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.5 5.25L20.25 12L13.5 18.75"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="card__button-with-arrow card__button-with-arrow_red"
+                >
+                  Normal
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.75 12H20.25"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.5 5.25L20.25 12L13.5 18.75"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg></button
+                ><button
+                  class="card__button-with-arrow card__button-with-arrow_red"
+                >
+                  Hover
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.75 12H20.25"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.5 5.25L20.25 12L13.5 18.75"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="card__title">Form elements</h2>
+            <form action="" class="card__form">
+              <h3 class="form__title">Input field</h3>
+              <div class="form__list-input">
+                <input
+                  type="text"
+                  class="form__input"
+                  placeholder="Normal"
+                /><input
+                  type="text"
+                  class="form__input"
+                  placeholder="Hover"
+                /><input
+                  type="text"
+                  class="form__input"
+                  placeholder="Clicked"
+                /><input type="text" class="form__input" placeholder="Typing" />
+              </div>
+              <h3 class="form__title">Dropdown item</h3>
+              <div class="form__list-dropdown">
+                <div class="form__item-dropdown">
+                  <h4 class="form__item-dropdown-title">Default item</h4>
+                  <div class="form__item-dropdown-wrapper">
+                    <input
+                      type="checkbox"
+                      class="form__checkbox"
+                      name="normal"
+                      id="normal"
+                    />
+                    <label for="normal" class="form__item-label">Normal</label>
+                  </div>
+                  <div class="form__item-dropdown-wrapper">
+                    <input
+                      type="checkbox"
+                      class="form__checkbox"
+                      name="hover"
+                      id="hover"
+                    />
+                    <label for="hover" class="form__item-label">Hover</label>
+                  </div>
+                  <div class="form__item-dropdown-wrapper">
+                    <input
+                      type="checkbox"
+                      class="form__checkbox"
+                      name="disabled"
+                      id="disabled"
+                      disabled
+                    />
+                    <label for="disabled" class="form__item-label" disabled
+                      >Disabled</label
+                    >
+                  </div>
+                </div>
+                <div class="form__item-dropdown">
+                  <h4 class="form__item-dropdown-title">Category Item</h4>
+                  <div class="form__item-dropdown-wrapper">
+                    <input
+                      type="checkbox"
+                      class="form__checkbox"
+                      name="normal"
+                    />
+                    <label
+                      class="form__item-label form__item-label_icon"
+                      for="normal"
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.25 10.125H17.25"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.75 10.125H9.75"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.25 8.625V11.625"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M16.1267 5.22559L7.87544 5.24998C6.72928 5.25006 5.61977 5.65388 4.74168 6.39053C3.86359 7.12718 3.27304 8.1496 3.0737 9.2783L3.0745 9.27844L1.54034 17.1687C1.44344 17.7185 1.52433 18.2849 1.77125 18.7855C2.01818 19.2862 2.41829 19.6952 2.91347 19.9529C3.40865 20.2107 3.97311 20.3039 4.52488 20.219C5.07665 20.1341 5.58698 19.8756 5.98177 19.4809L5.98162 19.4807L10.035 15L16.1267 14.9756C17.4197 14.9756 18.6596 14.462 19.5739 13.5477C20.4881 12.6335 21.0017 11.3935 21.0017 10.1006C21.0017 8.80766 20.4881 7.56768 19.5739 6.65344C18.6596 5.7392 17.4197 5.22559 16.1267 5.22559V5.22559Z"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.9277 9.25403L22.4606 17.1687C22.5575 17.7185 22.4766 18.2848 22.2297 18.7855C21.9827 19.2862 21.5826 19.6951 21.0874 19.9529C20.5923 20.2107 20.0278 20.3039 19.476 20.219C18.9243 20.1341 18.4139 19.8755 18.0191 19.4808L18.0193 19.4807L13.9688 14.9842"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg
+                      >Normal</label
+                    >
+                  </div>
+                  <div class="form__item-dropdown-wrapper">
+                    <input
+                      type="checkbox"
+                      class="form__checkbox"
+                      name="hover"
+                    />
+                    <label
+                      class="form__item-label form__item-label_icon"
+                      for="hover"
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.25 10.125H17.25"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.75 10.125H9.75"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.25 8.625V11.625"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M16.1267 5.22559L7.87544 5.24998C6.72928 5.25006 5.61977 5.65388 4.74168 6.39053C3.86359 7.12718 3.27304 8.1496 3.0737 9.2783L3.0745 9.27844L1.54034 17.1687C1.44344 17.7185 1.52433 18.2849 1.77125 18.7855C2.01818 19.2862 2.41829 19.6952 2.91347 19.9529C3.40865 20.2107 3.97311 20.3039 4.52488 20.219C5.07665 20.1341 5.58698 19.8756 5.98177 19.4809L5.98162 19.4807L10.035 15L16.1267 14.9756C17.4197 14.9756 18.6596 14.462 19.5739 13.5477C20.4881 12.6335 21.0017 11.3935 21.0017 10.1006C21.0017 8.80766 20.4881 7.56768 19.5739 6.65344C18.6596 5.7392 17.4197 5.22559 16.1267 5.22559V5.22559Z"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.9277 9.25403L22.4606 17.1687C22.5575 17.7185 22.4766 18.2848 22.2297 18.7855C21.9827 19.2862 21.5826 19.6951 21.0874 19.9529C20.5923 20.2107 20.0278 20.3039 19.476 20.219C18.9243 20.1341 18.4139 19.8755 18.0191 19.4808L18.0193 19.4807L13.9688 14.9842"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg
+                      >Hover</label
+                    >
+                  </div>
+                  <div class="form__item-dropdown-wrapper">
+                    <input
+                      type="checkbox"
+                      class="form__checkbox"
+                      name="disabled"
+                      disabled
+                    />
+                    <label
+                      class="form__item-label form__item-label_icon"
+                      for="disabled"
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.25 10.125H17.25"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.75 10.125H9.75"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.25 8.625V11.625"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M16.1267 5.22559L7.87544 5.24998C6.72928 5.25006 5.61977 5.65388 4.74168 6.39053C3.86359 7.12718 3.27304 8.1496 3.0737 9.2783L3.0745 9.27844L1.54034 17.1687C1.44344 17.7185 1.52433 18.2849 1.77125 18.7855C2.01818 19.2862 2.41829 19.6952 2.91347 19.9529C3.40865 20.2107 3.97311 20.3039 4.52488 20.219C5.07665 20.1341 5.58698 19.8756 5.98177 19.4809L5.98162 19.4807L10.035 15L16.1267 14.9756C17.4197 14.9756 18.6596 14.462 19.5739 13.5477C20.4881 12.6335 21.0017 11.3935 21.0017 10.1006C21.0017 8.80766 20.4881 7.56768 19.5739 6.65344C18.6596 5.7392 17.4197 5.22559 16.1267 5.22559V5.22559Z"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.9277 9.25403L22.4606 17.1687C22.5575 17.7185 22.4766 18.2848 22.2297 18.7855C21.9827 19.2862 21.5826 19.6951 21.0874 19.9529C20.5923 20.2107 20.0278 20.3039 19.476 20.219C18.9243 20.1341 18.4139 19.8755 18.0191 19.4808L18.0193 19.4807L13.9688 14.9842"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg
+                      >Disabled</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
