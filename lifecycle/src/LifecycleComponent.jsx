@@ -24,8 +24,11 @@ class LifecycleComponent extends React.Component {
       console.log(e.message);
     }
   }
+  shouldComponentUpdate(nextProp, nextState) {
+    return this.state.count % 2 != 0;
+  }
   componentDidUpdate() {
-    console.log("smth");
+    console.log(this.state.count);
   }
   componentWillUnmount() {
     console.log("delete");
