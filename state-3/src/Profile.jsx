@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./AllStyle.css";
+import UserInfo from "./UserInfo";
 function Profile() {
+  const [test, setTest] = useState(0);
   const [user, setUser] = useState({
     name: "Иван",
     age: 25,
@@ -8,10 +10,7 @@ function Profile() {
   });
   return (
     <div className="wrapper">
-      <h2>Профиль пользователя</h2>
-      <p>Имя пользователя: {user.name}</p>
-      <p>Возраст: {user.age}</p>
-      <p>Активен: {user.isActive ? "true" : "false"}</p>
+      <UserInfo user={user}></UserInfo>
       <button
         onClick={() =>
           setUser((oldUser) => {
@@ -39,6 +38,7 @@ function Profile() {
       >
         Переключить активность
       </button>
+      <button onClick={() => setTest((oldTest) => oldTest + 1)}>{test}</button>
     </div>
   );
 }

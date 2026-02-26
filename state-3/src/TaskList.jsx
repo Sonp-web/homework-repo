@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AllStyle.css";
+import TaskItem from "./TaskItem";
 function TaskList() {
   const [tasks, setTasks] = useState(["Купить хлеб", "Погулять с собакой"]);
   return (
@@ -7,7 +8,7 @@ function TaskList() {
       <h2>Список задач</h2>
       <ul>
         {tasks.map((item) => {
-          return <li>{item}</li>;
+          return <TaskItem text={item}></TaskItem>;
         })}
       </ul>
       <button
