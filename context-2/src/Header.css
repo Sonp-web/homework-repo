@@ -1,0 +1,14 @@
+.header[data-theme="light"] {
+  --background-color: #fafafa;
+  --text-color: #242424;
+}
+
+.header[data-theme="dark"] {
+  --background-color: #242424;
+  --text-color: #fafafa;
+}
+
+header {
+  background: var(--background-color);
+  color: var(--text-color);
+}
