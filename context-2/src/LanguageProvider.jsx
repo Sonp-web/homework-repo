@@ -1,4 +1,4 @@
-import { LanguageContext, languages, translations } from "./LanguageContext";
+import { LanguageContext, translations } from "./LanguageContext";
 import { useState, useEffect } from "react";
 
 const LanguageProvider = ({ children }) => {
@@ -7,15 +7,8 @@ const LanguageProvider = ({ children }) => {
     document.documentElement.dataset.language = language;
   }, [language]);
 
-  const toggleLanguage = () => {
-    setLanguage(
-      (oldLanguage) =>
-        languages[
-          languages.indexOf(oldLanguage) + 1 === languages.length
-            ? 0
-            : languages.indexOf(oldLanguage) + 1
-        ],
-    );
+  const toggleLanguage = (e) => {
+    setLanguage(e.target.value);
   };
   return (
     <>

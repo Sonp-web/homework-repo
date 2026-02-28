@@ -1,11 +1,11 @@
 import { ThemeContext, themes } from "./ThemeContext";
-import { useState, useEffect } from "react";
+import { useState,useEffect } from "react";
 
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-  }, [theme]);
+  useEffect(()=>{
+    document.documentElement.dataset.theme=theme
+  },[theme]) 
   const toggleTheme = () => {
     setTheme(
       (oldTheme) =>
