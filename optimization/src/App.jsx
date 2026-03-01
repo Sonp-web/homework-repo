@@ -1,10 +1,9 @@
 import { useState, useCallback, useMemo } from "react";
 import "./App.css";
 import SearchInput from "./SearchInput";
-import ItemList from "./ItemList";
+import ItemListHOC from "./ItemList";
 import CounterButton from "./CounterButton";
 function App() {
-  console.log("app");
   const [text, setText] = useState("");
   const array = useMemo(() => ["str", "str1", "str2"], []);
   const [count, setCount] = useState(0);
@@ -17,8 +16,8 @@ function App() {
     <>
       <SearchInput setText={inputChange}></SearchInput>
       <h1>{text}</h1>
-      <ItemList list={array} filterStr={text}></ItemList>
-      <CounterButton counter={counter}></CounterButton>
+      <ItemListHOC list={array} filterStr={text}></ItemListHOC>
+      <CounterButton counter={counter} count={count}></CounterButton>
     </>
   );
 }
