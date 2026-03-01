@@ -1,10 +1,8 @@
 import React from "react";
-const CounterButton = ({ counter }) => {
-  console.log("counterButton");
-
+const CounterButton = ({ counter, count }) => {
   return (
     <>
-      <button onClick={counter}> </button>
+      <button onClick={counter}> {count}</button>
     </>
   );
 };

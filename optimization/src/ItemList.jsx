@@ -1,9 +1,8 @@
 import { useMemo } from "react";
 import React from "react";
+import withRenderTracker from "./withRenderTracker";
 const ItemList = ({ list, filterStr }) => {
-  console.log("ItemList");
   const array = useMemo(() => {
-    console.log("filter");
 
     return list.filter((item) => item.includes(filterStr));
   }, [list, filterStr]);
@@ -15,4 +14,5 @@ const ItemList = ({ list, filterStr }) => {
     </ul>
   );
 };
-export default React.memo(ItemList);
+const ItemListHOC = withRenderTracker(ItemList)
+export default React.memo(ItemListHOC);
