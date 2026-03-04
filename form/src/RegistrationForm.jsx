@@ -84,7 +84,7 @@ const RegistrationForm = () => {
         {errors.tel && <p>{errors.tel.message}</p>}
         <button type="submit">Зарегистрироваться</button>
       </form>
-      <Outlet></Outlet>
+      <Outlet />
     </>
   );
 };
