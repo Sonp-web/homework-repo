@@ -1,0 +1,192 @@
+@import url("./reset.css");
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: var(--font-size-xl);
+
+  color-scheme: light dark;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--color-primary-hover);
+}
+a,
+a:visited {
+  color: inherit;
+}
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-family-sans), "normal";
+}
+
+h1 {
+  font-size: 48px;
+}
+p {
+  text-indent: 30px;
+}
+ul,
+ul li {
+  list-style: disc;
+}
+li {
+  margin-left: 20px;
+}
+h1,
+h2 {
+  text-align: center;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--color-primary-hover);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/*test*/
+/* Основные цвета (CSS-переменные) */
+:root {
+  /* Primary */
+  --color-primary: #0d6efd;
+  --color-primary-hover: #0b5ed7;
+  --color-primary-light: rgba(13, 110, 253, 0.1);
+
+  /* Secondary */
+  --color-secondary: #6c757d;
+  --color-secondary-hover: #5c636a;
+
+  /* Success/Error/Warning/Info */
+  --color-success: #054b2b;
+  --color-error: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #0dcaf0;
+
+  /* Neutral (Light theme) */
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-border: #dee2e6;
+  --color-text-primary: #212529;
+  --color-text-secondary: #6c757d;
+  --color-text-disabled: #adb5bd;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --color-background: #212529;
+  --color-surface: #2b3035;
+  --color-border: #495057;
+  --color-text-primary: #f8f9fa;
+  --color-text-secondary: #adb5bd;
+  --color-text-disabled: #6c757d;
+}
+:root {
+  /* Системные шрифты (оптимальная производительность) */
+  --font-family-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-family-mono:
+    "SF Mono", "Menlo", "Monaco", "Cascadia Code", "Consolas", "Courier New",
+    monospace;
+}
+:root {
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px - основной текст */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem; /* 36px */
+  --font-size-5xl: 3rem; /* 48px */
+}
+
+/* Заголовки */
+h1 {
+  font-size: var(--font-size-5xl);
+}
+h2 {
+  font-size: var(--font-size-4xl);
+}
+h3 {
+  font-size: var(--font-size-3xl);
+}
+h4 {
+  font-size: var(--font-size-2xl);
+}
+h5 {
+  font-size: var(--font-size-xl);
+}
+h6 {
+  font-size: var(--font-size-lg);
+}
+:root {
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Применение */
+  --heading-font-weight: var(--font-weight-bold);
+  --body-font-weight: var(--font-weight-normal);
+}
+:root {
+  --line-height-tight: 1.2; /* Заголовки */
+  --line-height-normal: 1.5; /* Текст */
+  --line-height-relaxed: 1.75; /* Длинные тексты */
+}
+:root {
+  /* Базовая единица отступа (4px) */
+  --spacing-unit: 0.25rem; /* 4px */
+
+  /* Шкала отступов */
+  --spacing-0: 0;
+  --spacing-1: calc(var(--spacing-unit) * 1); /* 4px */
+  --spacing-2: calc(var(--spacing-unit) * 2); /* 8px */
+  --spacing-3: calc(var(--spacing-unit) * 3); /* 12px */
+  --spacing-4: calc(var(--spacing-unit) * 4); /* 16px */
+  --spacing-5: calc(var(--spacing-unit) * 6); /* 24px */
+  --spacing-6: calc(var(--spacing-unit) * 8); /* 32px */
+  --spacing-7: calc(var(--spacing-unit) * 12); /* 48px */
+  --spacing-8: calc(var(--spacing-unit) * 16); /* 64px */
+  --spacing-9: calc(var(--spacing-unit) * 24); /* 96px */
+  --spacing-10: calc(var(--spacing-unit) * 32); /* 128px */
+}
+
+/* Специализированные отступы */
+:root {
+  --space-xs: var(--spacing-1); /* 4px */
+  --space-sm: var(--spacing-2); /* 8px */
+  --space-md: var(--spacing-4); /* 16px - стандартный */
+  --space-lg: var(--spacing-5); /* 24px */
+  --space-xl: var(--spacing-6); /* 32px */
+  --space-2xl: var(--spacing-7); /* 48px */
+}
