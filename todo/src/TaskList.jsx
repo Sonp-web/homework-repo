@@ -1,5 +1,5 @@
 import Task from "./Task";
-const TaskList = ({ tasks, deleteTask, editTask,doneTask }) => {
+const TaskList = ({ tasks, deleteTask, editTask, doneTask }) => {
   return (
     <>
       {tasks.map((item) => (
@@ -9,7 +9,7 @@ const TaskList = ({ tasks, deleteTask, editTask,doneTask }) => {
           deleteTask={deleteTask}
           editTask={editTask}
           doneTask={doneTask}
-        ></Task>
+        />
       ))}
     </>
   );

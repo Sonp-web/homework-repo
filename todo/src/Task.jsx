@@ -43,7 +43,7 @@ const Task = ({ task, deleteTask, editTask, doneTask }) => {
           ref={focusInput}
           onChange={(e) => setEditText(e.target.value)}
           onKeyDown={handleKeyDown}
-        ></input>
+        />
       ) : (
         <p style={task.isDone ? { textDecoration: "line-through" } : {}}>
           {task.text}
