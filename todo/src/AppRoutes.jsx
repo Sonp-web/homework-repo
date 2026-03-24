@@ -1,6 +1,13 @@
 import TaskList from "./TaskList";
 import { Routes, Route } from "react-router-dom";
-const AppRoutes = ({ tasks, deleteTask, editTask, doneTask }) => {
+const AppRoutes = ({
+  tasks,
+  deleteTask,
+  editTask,
+  doneTask,
+  loadingUpdate,
+  loadingGet,
+}) => {
   return (
     <Routes>
       <Route
@@ -11,6 +18,8 @@ const AppRoutes = ({ tasks, deleteTask, editTask, doneTask }) => {
             deleteTask={deleteTask}
             editTask={editTask}
             doneTask={doneTask}
+            loadingUpdate={loadingUpdate}
+            loadingGet={loadingGet}
           />
         }
       />
@@ -18,10 +27,12 @@ const AppRoutes = ({ tasks, deleteTask, editTask, doneTask }) => {
         path="/active"
         element={
           <TaskList
-            tasks={tasks.filter((item) => !item.isDone)}
+            tasks={tasks.filter((item) => !item.isCompleted)}
             deleteTask={deleteTask}
             editTask={editTask}
             doneTask={doneTask}
+            loadingUpdate={loadingUpdate}
+            loadingGet={loadingGet}
           />
         }
       />
@@ -29,10 +40,12 @@ const AppRoutes = ({ tasks, deleteTask, editTask, doneTask }) => {
         path="/done"
         element={
           <TaskList
-            tasks={tasks.filter((item) => item.isDone)}
+            tasks={tasks.filter((item) => item.isCompleted)}
             deleteTask={deleteTask}
             editTask={editTask}
             doneTask={doneTask}
+            loadingUpdate={loadingUpdate}
+            loadingGet={loadingGet}
           />
         }
       />
