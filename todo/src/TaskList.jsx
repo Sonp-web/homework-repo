@@ -6,11 +6,24 @@ const TaskList = ({
   doneTask,
   loadingUpdate,
   loadingGet,
+  filter,
 }) => {
+  let filteredTasks = [];
+  switch (filter) {
+    case "active":
+      filteredTasks = tasks.filter((task) => !task.isCompleted);
+      break;
+    case "done":
+      filteredTasks = tasks.filter((task) => task.isCompleted);
+      break;
+    default:
+      filteredTasks = tasks;
+  }
+
   return (
     <>
       {loadingGet && <div className="spinner"></div>}
-      {tasks.map((item) => (
+      {filteredTasks.map((item) => (
         <Task
           key={item.id}
           task={item}
