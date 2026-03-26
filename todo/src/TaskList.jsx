@@ -8,17 +8,26 @@ const TaskList = ({
   loadingGet,
   filter,
 }) => {
-  let filteredTasks = [];
-  switch (filter) {
-    case "active":
-      filteredTasks = tasks.filter((task) => !task.isCompleted);
-      break;
-    case "done":
-      filteredTasks = tasks.filter((task) => task.isCompleted);
-      break;
-    default:
-      filteredTasks = tasks;
-  }
+  //улучшенный фильтр
+  const filterMap = {
+    active: (task) => !task.isCompleted,
+    done: (task) => task.isCompleted,
+    all: () => true,
+  };
+  const filterFn = filterMap[filter] || filterMap.all;
+  const filteredTasks = tasks.filter(filterFn);
+  //
+  // let filteredTasks = [];
+  // switch (filter) {
+  //   case "active":
+  //     filteredTasks = tasks.filter((task) => !task.isCompleted);
+  //     break;
+  //   case "done":
+  //     filteredTasks = tasks.filter((task) => task.isCompleted);
+  //     break;
+  //   default:
+  //     filteredTasks = tasks;
+  // }
 
   return (
     <>
