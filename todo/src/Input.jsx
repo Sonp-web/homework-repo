@@ -1,19 +1,20 @@
 import { useState, useRef, useEffect } from "react";
-const Input = ({ setTasks, sortingTasks }) => {
+const Input = ({ setTasks, sortingTasks,postTask, loadingAdd}) => {
   const [text, setText] = useState("");
   const [isNull, setIsNull] = useState(false);
   const mainInput = useRef(null);
-  const add = () => {
+
+  const add = async () => {
     if (text.trim().length == 0) {
       setIsNull(true);
     } else {
+      const id = await postTask({ title: text });
       setTasks((oldTasks) => [
         ...oldTasks,
         {
-          id: crypto.randomUUID(),
-          text: text,
-          isDone: false,
-          date: Date.now(),
+          id,
+          title: text,
+          isCompleted: false,
         },
       ]);
       sortingTasks();
@@ -51,7 +52,10 @@ const Input = ({ setTasks, sortingTasks }) => {
         />
         {isNull && <p>Нельзя добавить пустую строку</p>}
       </div>
-      <button onClick={add}>Добавить</button>
+      <button onClick={add} disabled={loadingAdd}>
+        Добавить
+      </button>
+      {loadingAdd && <div className="spinner"></div>}
     </div>
   );
 };

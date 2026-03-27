@@ -1,7 +1,7 @@
 const InfoDo = ({ tasks, clearDone, setNewUp }) => {
   return (
     <div className="notDone">
-      <p>Осталось дел {tasks.filter((item) => !item.isDone).length}</p>
+      <p>Осталось дел {tasks.filter((item) => !item.isCompleted).length}</p>
       <button onClick={clearDone}>Очистить выполненные</button>
       <button
         onClick={() => {

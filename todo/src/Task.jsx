@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef } from "react";
-const Task = ({ task, deleteTask, editTask, doneTask }) => {
+const Task = ({ task, deleteTask, editTask, doneTask, loadingUpdate }) => {
   const [isEdit, setIsEdit] = useState(false);
   const focusInput = useRef(null);
-  const [editText, setEditText] = useState(task.text);
-  const save = () => {
+  const [editText, setEditText] = useState(task.title);
+  const save = async () => {
     if (editText.length != 0) {
-      editTask(task.id, editText);
+      await editTask(task.id, editText);
       setIsEdit(false);
     }
   };
   const back = () => {
-    setEditText(task.text);
+    setEditText(task.title);
     setIsEdit(false);
   };
   const handleKeyDown = (e) => {
@@ -32,9 +32,10 @@ const Task = ({ task, deleteTask, editTask, doneTask }) => {
     <div className="task">
       <input
         type="checkbox"
-        checked={task.isDone}
-        value={task.isDone}
+        checked={task.isCompleted}
+        value={task.isCompleted}
         onChange={() => doneTask(task.id)}
+        disabled={loadingUpdate}
       />
       {isEdit ? (
         <input
@@ -45,8 +46,8 @@ const Task = ({ task, deleteTask, editTask, doneTask }) => {
           onKeyDown={handleKeyDown}
         />
       ) : (
-        <p style={task.isDone ? { textDecoration: "line-through" } : {}}>
-          {task.text}
+        <p style={task.isCompleted ? { textDecoration: "line-through" } : {}}>
+          {task.title}
         </p>
       )}
       {!isEdit && (
@@ -60,12 +61,19 @@ const Task = ({ task, deleteTask, editTask, doneTask }) => {
       )}
       {isEdit && (
         <>
-          <button onClick={save}>Сохранить</button>
-          <button onClick={back}>Отмена</button>
+          <button onClick={save} disabled={loadingUpdate}>
+            Сохранить
+          </button>
+          <button onClick={back} disabled={loadingUpdate}>
+            Отмена
+          </button>
         </>
       )}
 
-      <button onClick={() => deleteTask(task.id)}>X</button>
+      <button onClick={() => deleteTask(task.id)} disabled={loadingUpdate}>
+        X
+      </button>
+      {loadingUpdate && <div className="spinner"></div>}
     </div>
   );
 };
