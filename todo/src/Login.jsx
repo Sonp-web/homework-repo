@@ -30,7 +30,7 @@ const Login = ({ loadingLogin, onSubmitLogin }) => {
                 message: "Неверный email",
               },
             })}
-          />{" "}
+          />
           {errors.email && <p>{errors.email.message}</p>}
         </div>
         <div>

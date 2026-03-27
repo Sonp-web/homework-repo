@@ -104,7 +104,7 @@ function App() {
             clearDone={clearDone}
             setNewUp={setNewUp}
             loadingAdd={loadingAdd}
-          />{" "}
+          />
         </>
       ) : (
         <>
@@ -112,13 +112,13 @@ function App() {
             onSubmitRegistration={onSubmitRegistration}
             loadingRegistratio={loadingRegistration}
             success={success}
-          ></Registration>
+          />
           <Login
             setToken={setToken}
             loadingLogin={loadingLogin}
             setLoadingLogin={setLoadingLogin}
             onSubmitLogin={onSubmitLogin}
-          ></Login>
+          />
         </>
       )}
     </>
