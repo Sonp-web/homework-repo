@@ -1,4 +1,12 @@
-const InfoDo = ({ tasks, clearDone, setNewUp }) => {
+import type { TaskType } from "./App";
+
+type PropsType = {
+  tasks: TaskType[];
+  clearDone: () => void;
+  setNewUp: (isIt: boolean) => void;
+};
+
+const InfoDo = ({ tasks, clearDone, setNewUp }: PropsType) => {
   return (
     <div className="notDone">
       <p>Осталось дел {tasks.filter((item) => !item.isDone).length}</p>

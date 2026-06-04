@@ -1,5 +1,7 @@
 import Task from "./Task";
-const TaskList = ({ tasks, deleteTask, editTask, doneTask }) => {
+import type { PropsType } from "./AppRoutes";
+
+const TaskList = ({ tasks, deleteTask, editTask, doneTask }: PropsType) => {
   return (
     <>
       {tasks.map((item) => (

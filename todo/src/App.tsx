@@ -7,8 +7,15 @@ import AppRoutes from "./AppRoutes";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
+export type TaskType = {
+  id: number;
+  text: string;
+  isDone: boolean;
+  date: number;
+};
+
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState<TaskType[]>([]);
   const [newUp, setNewUp] = useState(false);
 
   useEffect(() => {
@@ -26,22 +33,24 @@ function App() {
   }, [newUp]);
 
   const sortingTasks = () => {
-    setTasks((oldTasks) =>
+    setTasks((oldTasks: TaskType[]) =>
       newUp
         ? [...oldTasks].sort((a, b) => b.date - a.date)
         : [...oldTasks].sort((a, b) => a.date - b.date),
     );
   };
 
-  const deleteTask = (id) => {
+  const deleteTask = (id: number) => {
     setTasks((oldTasks) => oldTasks.filter((item) => item.id != id));
   };
-  const editTask = (id, text) => {
+  const editTask = (id: number, text: string) => {
     setTasks((oldTasks) =>
       oldTasks.map((item) => (item.id == id ? { ...item, text: text } : item)),
     );
   };
-  const doneTask = (id) => {
+  const doneTask = (id: number) => {
+    console.log(tasks);
+
     setTasks((oldTasks) =>
       oldTasks.map((item) =>
         item.id == id ? { ...item, isDone: !item.isDone } : item,
@@ -70,4 +79,4 @@ function App() {
 
 export default App;
 
-crypto.randomUUID()
+crypto.randomUUID();

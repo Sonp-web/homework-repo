@@ -1,16 +1,22 @@
 import { useState, useRef, useEffect } from "react";
-const Input = ({ setTasks, sortingTasks }) => {
+import type { KeyboardEventHandler } from "react";
+import type { TaskType } from "./App";
+type PropsType = {
+  setTasks: (value: TaskType[] | ((prev: TaskType[]) => TaskType[])) => void;
+  sortingTasks: () => void;
+};
+const Input = ({ setTasks, sortingTasks }: PropsType) => {
   const [text, setText] = useState("");
   const [isNull, setIsNull] = useState(false);
-  const mainInput = useRef(null);
+  const mainInput = useRef<HTMLInputElement>(null);
   const add = () => {
     if (text.trim().length == 0) {
       setIsNull(true);
     } else {
-      setTasks((oldTasks) => [
+      setTasks((oldTasks: TaskType[]) => [
         ...oldTasks,
         {
-          id: crypto.randomUUID(),
+          id: +crypto.randomUUID(),
           text: text,
           isDone: false,
           date: Date.now(),
@@ -20,13 +26,13 @@ const Input = ({ setTasks, sortingTasks }) => {
       setText("");
     }
   };
-  const handleClick = (e) => {
+  const handleClick: KeyboardEventHandler<HTMLInputElement> = (e) => {
     switch (e.key) {
       case "Enter":
         add();
         break;
       case "Escape":
-        mainInput.current.blur();
+        mainInput.current?.blur();
         break;
     }
   };

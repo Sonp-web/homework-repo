@@ -1,6 +1,13 @@
 import TaskList from "./TaskList";
 import { Routes, Route } from "react-router-dom";
-const AppRoutes = ({ tasks, deleteTask, editTask, doneTask }) => {
+import type { TaskType } from "./App";
+export type PropsType = {
+  tasks: TaskType[];
+  deleteTask: (id: number) => void;
+  editTask: (id: number, text: string) => void;
+  doneTask: (id: number) => void;
+};
+const AppRoutes = ({ tasks, deleteTask, editTask, doneTask }: PropsType) => {
   return (
     <Routes>
       <Route

@@ -1,7 +1,15 @@
 import { useState, useEffect, useRef } from "react";
-const Task = ({ task, deleteTask, editTask, doneTask }) => {
+import type { KeyboardEventHandler } from "react";
+import type { PropsType } from "./AppRoutes";
+import type { TaskType } from "./App";
+
+type TaskPropsType = Omit<PropsType, "tasks"> & {
+  task: TaskType;
+};
+
+const Task = ({ task, deleteTask, editTask, doneTask }: TaskPropsType) => {
   const [isEdit, setIsEdit] = useState(false);
-  const focusInput = useRef(null);
+  const focusInput = useRef<HTMLInputElement>(null);
   const [editText, setEditText] = useState(task.text);
   const save = () => {
     if (editText.length != 0) {
@@ -13,7 +21,7 @@ const Task = ({ task, deleteTask, editTask, doneTask }) => {
     setEditText(task.text);
     setIsEdit(false);
   };
-  const handleKeyDown = (e) => {
+  const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
     switch (e.key) {
       case "Enter":
         save();
@@ -25,7 +33,7 @@ const Task = ({ task, deleteTask, editTask, doneTask }) => {
   };
   useEffect(() => {
     if (focusInput.current) {
-      focusInput.current.focus();
+      focusInput.current?.focus();
     }
   }, [isEdit]);
   return (
@@ -33,7 +41,6 @@ const Task = ({ task, deleteTask, editTask, doneTask }) => {
       <input
         type="checkbox"
         checked={task.isDone}
-        value={task.isDone}
         onChange={() => doneTask(task.id)}
       />
       {isEdit ? (
