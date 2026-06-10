@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -181,33 +181,4 @@
     right: 0;
     border-right-color: var(--border);
   }
-}
-
-.input {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-.task {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-.notDone {
-  display: flex;
-  flex-direction: row;
-
-  gap: 20px;
-  margin: 0 auto;
 }
